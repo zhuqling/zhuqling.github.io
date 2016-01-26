@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>OS X Yosemite Window with CSS3</title>
+<link href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<style>
+    
+    body {
+        font-family: 'Lucida Grande';
+        font-size: 1em;
+        line-height: 1em;
+        font-weight: 300;
+        -webkit-font-smoothing: antialiased;
+        margin: 100px 0 0 0;
+        text-align: center;
+    }
+    
+    @media all and (max-width: 1140px) {
+        .inside {
+            max-width: 95%;
+            margin: auto;
+        }
+    }
+    
+    .clearfix:before, .clearfix:after { 
+        content: " "; 
+        display: table; 
+    }
+    .clearfix:after { 
+        clear: both; 
+    }
+    .clearfix { 
+        *zoom: 1;
+    }
+    
+    h1 {
+        margin-bottom: 50px;
+    }
+    
+    .osx-window {
+        max-width: 1000px;
+        margin: 20px auto;
+    }
+    
+    .osx-window header {
+        position: relative;
+        width: 100%;
+        height: 35px;
+        line-height: 35px;
+        color: black;
+        background: linear-gradient(#e8eae9, #d5d5d5);
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom: 1px solid #b3b2b4;
+    }
+    
+    p.osx-window-title {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        font-size: .8em;
+    }
+    
+    a.osx-window-btn {
+        position: absolute;
+        top: 0;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        margin: 10px 0 0 5px;
+        background: #bbb;
+    }
+    
+    a.osx-window-btn.red {
+        left: 5px;
+    }
+    
+    a.osx-window-btn.yellow {
+        left: 25px;
+    }
+    
+    a.osx-window-btn.green {
+        left: 45px;
+    }
+    
+    .osx-window img {
+        max-width: 100%;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+        border-left: 1px solid #cbcbcb;
+        border-right: 1px solid #cbcbcb;
+        border-bottom: 1px solid #cbcbcb;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+    .osx-window:hover a.osx-window-btn.red {
+        transition: .2s;
+        background: #FF5955;
+    }
+    
+    .osx-window:hover a.osx-window-btn.yellow {
+        transition: .2s;
+        background: #FFBB09;
+    }
+    
+    .osx-window:hover a.osx-window-btn.green {
+        transition: .2s;
+        background: #17C935; 
+    }
+    
+</style>
+</head>
+
+<body>
+    
+    <h1><i class="fa fa-apple"></i> OS X Yosemite Window with CSS3</h1>
+    
+    <div class="inside">
+        <div class="osx-window">
+            <header>
+                <a href="" class="osx-window-btn red"></a>
+                <a href="" class="osx-window-btn yellow"></a>
+                <a href="" class="osx-window-btn green"></a>
+                <p class="osx-window-title">Apple :: OS X Yosemite :: CSS3</p>
+            </header>
+            <img src="http://placehold.it/1000x600/ffffff" />
+        </div>
+    </div>
+    
+</body>
+</html>
