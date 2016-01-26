@@ -2,6 +2,7 @@
 menu:
   Home: /
   Archives: /archives
+  Resume: /2016/01/26/简历/
 rss: /atom.xml
 
 # Content
@@ -20,7 +21,7 @@ widgets:
 # Miscellaneous
 google_analytics:
 favicon: /favicon.png
-twitter:
+twitter: zhuqling
 google_plus:
 fb_admins:
 fb_app_id:
