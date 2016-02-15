@@ -68,6 +68,122 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-git-重设远程源" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/15/git-重设远程源/" class="article-date">
+  <time datetime="2016-02-15T09:01:33.000Z" itemprop="datePublished">2016-02-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/15/git-重设远程源/">git 重设远程源</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>当git远程源有变更或设置错误了源时，使用如下命令个性远程源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git remote rm origin;</span><br><span class="line">git remote add git@<span class="number">192.168</span>.<span class="number">2.4</span>:root/dd-push.git;</span><br><span class="line">git push --set-upstream origin master;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhuqling.github.io/2016/02/15/git-重设远程源/" data-id="ciknr70wj000wm3su84bxt1s0" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git-rebase/">git rebase</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git回滚到已提交的上个版本" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/15/git回滚到已提交的上个版本/" class="article-date">
+  <time datetime="2016-02-15T08:52:55.000Z" itemprop="datePublished">2016-02-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/15/git回滚到已提交的上个版本/">git回滚到已提交的上个版本</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>当git push后，发现错误提交了代码，可以使用以下命令回滚到上个版本，以你的正确版本号替换下面的版本号<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --hard <span class="number">56</span>e05<span class="built_in">fc</span>; git reset --soft HEAD@&#123;<span class="number">1</span>&#125;; git commit</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhuqling.github.io/2016/02/15/git回滚到已提交的上个版本/" data-id="ciknr70wf000rm3su9ututhh8" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git-revert/">git revert</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-钉钉API内置图标" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/26/钉钉API内置图标/" class="article-date">
+  <time datetime="2016-01-26T06:25:57.000Z" itemprop="datePublished">2016-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/26/钉钉API内置图标/">钉钉API内置图标</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Icon_u7D22_u5F15_u503C_u5BF9_u5E94_u7684_u56FE_u7247"><a href="#Icon_u7D22_u5F15_u503C_u5BF9_u5E94_u7684_u56FE_u7247" class="headerlink" title="Icon索引值对应的图片"></a>Icon索引值对应的图片</h2><p>每个icon上方的字符串就是对应icon的索引<br>通过设置相关索引，可以为按钮设置图标</p>
+<table style="background:black;color:white;"><br><tr><br>    <td> trash <img src="/images/TB1U10ZLXXXXXbTXVXXXXXXXXXX-40-40.png" alt=""></td><br>    <td> time <img src="/images/TB1Mbh3LXXXXXXAXVXXXXXXXXXX-40-40.png" alt=""></td><br>    <td> setting <img src="/images/TB1Cz4YLXXXXXcKXVXXXXXXXXXX-40-40.png" alt=""></td><br>    <td> send <img src="/images/TB1e9d0LXXXXXbkXVXXXXXXXXXX-48-48.png" alt=""></td><br></tr><br><tr><br>    <td> scan <img src="/images/TB1Tfd8LXXXXXbDXFXXXXXXXXXX-40-40.png" alt=""></td><br>    <td> reply <img src="/images/TB1p09nLXXXXXXAXXXXXXXXXXXX-48-48.png" alt=""></td><br>    <td> photo <img src="/images/TB1KdqaLXXXXXXgXFXXXXXXXXXX-40-40.png" alt=""></td><br>    <td> personal <img src="/images/TB1w81gLXXXXXXDXpXXXXXXXXXX-40-40.png" alt=""></td><br></tr><br><tr><br>    <td> org <img src="/images/TB1BEpYLXXXXXcdXVXXXXXXXXXX-48-48.png" alt=""></td><br>    <td> ok  <img src="/images/TB1Qkt.LXXXXXakXFXXXXXXXXXX-48-48.png" alt=""></td><br>    <td> more <img src="/images/TB17xanLXXXXXapXXXXXXXXXXXX-40-40.png" alt=""></td><br>    <td> group <img src="/images/TB1H142LXXXXXaiXVXXXXXXXXXX-40-40.png" alt=""></td><br></tr><br><tr><br>    <td> forward <img src="/images/TB1lsl9LXXXXXbgXFXXXXXXXXXX-40-40.png" alt=""></td><br>    <td> folder <img src="/images/TB1Ge01LXXXXXa1XVXXXXXXXXXX-40-40.png" alt=""></td><br>    <td> file <img src="/images/TB1wQOfLXXXXXaoXpXXXXXXXXXX-40-40.png" alt=""></td><br>    <td> edit <img src="/images/TB14HSnLXXXXXanXXXXXXXXXXXX-40-40.png" alt=""></td><br></tr><br><tr><br>    <td> create <img src="/images/TB1OCigLXXXXXXZXpXXXXXXXXXX-48-48.png" alt=""></td><br>    <td> calendar  <img src="/images/TB1pi41LXXXXXaRXVXXXXXXXXXX-40-40.png" alt=""></td><br>    <td> addfriend <img src="/images/TB1cut5LXXXXXc2XFXXXXXXXXXX-40-40.png" alt=""></td><br>    <td> add <img src="/images/TB1GN0VLXXXXXXVaXXXXXXXXXXX-40-40.png" alt=""></td><br></tr><br></table>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhuqling.github.io/2016/01/26/钉钉API内置图标/" data-id="ciknr70vz0007m3sui7ygswx7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-技术分享-2016-1-22" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/26/技术分享-2016-1-22/" class="article-date">
@@ -106,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/技术分享-2016-1-22/" data-id="cijuxpqk6000ot1sux218vj55" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/技术分享-2016-1-22/" data-id="ciknr70w5000fm3su5lchy9au" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术分享/">技术分享</a></li></ul>
@@ -146,45 +262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/git-ignore-file/" data-id="cijuxidky000it1suot394pjq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-git-ignore-file" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/01/26/git-ignore-file/" class="article-date">
-  <time datetime="2016-01-26T04:54:46.000Z" itemprop="datePublished">2016-01-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/26/git-ignore-file/">git ignore file</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Xcode_-gitignore_file"><a href="#Xcode_-gitignore_file" class="headerlink" title="Xcode .gitignore file"></a>Xcode .gitignore file</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#########################&#10;# .gitignore file for Xcode4 and Xcode5 Source projects&#10;#&#10;# Apple bugs, waiting for Apple to fix/respond:&#10;#&#10;#    15564624 - what does the xccheckout file in Xcode5 do? Where&#39;s the documentation?&#10;#&#10;# Version 2.3&#10;# For latest version, see: http://stackoverflow.com/questions/49478/git-ignore-file-for-xcode-projects&#10;#&#10;# 2014 updates:&#10;# - appended non-standard items DISABLED by default (uncomment if you use those tools)&#10;# - removed the edit that an SO.com moderator made without bothering to ask me&#10;# - researched CocoaPods .lock more carefully, thanks to Gokhan Celiker&#10;# 2013 updates:&#10;# - fixed the broken &#34;save personal Schemes&#34;&#10;# - added line-by-line explanations for EVERYTHING (some were missing)&#10;#&#10;# NB: if you are storing &#34;built&#34; products, this WILL NOT WORK,&#10;# and you should use a different .gitignore (or none at all)&#10;# This file is for SOURCE projects, where there are many extra&#10;# files that we want to exclude&#10;#&#10;#########################&#10;&#10;#####&#10;# OS X temporary files that should never be committed&#10;#&#10;# c.f. http://www.westwind.com/reference/os-x/invisibles.html&#10;&#10;.DS_Store&#10;&#10;# c.f. http://www.westwind.com/reference/os-x/invisibles.html&#10;&#10;.Trashes&#10;&#10;# c.f. http://www.westwind.com/reference/os-x/invisibles.html&#10;&#10;*.swp&#10;&#10;#&#10;# *.lock - this is used and abused by many editors for many different things.&#10;#    For the main ones I use (e.g. Eclipse), it should be excluded &#10;#    from source-control, but YMMV.&#10;#   (lock files are usually local-only file-synchronization on the local FS that should NOT go in git)&#10;# c.f. the &#34;OPTIONAL&#34; section at bottom though, for tool-specific variations!&#10;&#10;*.lock&#10;&#10;&#10;#&#10;# profile - REMOVED temporarily (on double-checking, I can&#39;t find it in OS X docs?)&#10;#profile&#10;&#10;&#10;####&#10;# Xcode temporary files that should never be committed&#10;# &#10;# NB: NIB/XIB files still exist even on Storyboard projects, so we want this...&#10;&#10;*~.nib&#10;&#10;&#10;####&#10;# Xcode build files -&#10;#&#10;# NB: slash on the end, so we only remove the FOLDER, not any files that were badly named &#34;DerivedData&#34;&#10;&#10;DerivedData/&#10;&#10;# NB: slash on the end, so we only remove the FOLDER, not any files that were badly named &#34;build&#34;&#10;&#10;build/&#10;&#10;&#10;#####&#10;# Xcode private settings (window sizes, bookmarks, breakpoints, custom executables, smart groups)&#10;#&#10;# This is complicated:&#10;#&#10;# SOMETIMES you need to put this file in version control.&#10;# Apple designed it poorly - if you use &#34;custom executables&#34;, they are&#10;#  saved in this file.&#10;# 99% of projects do NOT use those, so they do NOT want to version control this file.&#10;#  ..but if you&#39;re in the 1%, comment out the line &#34;*.pbxuser&#34;&#10;&#10;# .pbxuser: http://lists.apple.com/archives/xcode-users/2004/Jan/msg00193.html&#10;&#10;*.pbxuser&#10;&#10;# .mode1v3: http://lists.apple.com/archives/xcode-users/2007/Oct/msg00465.html&#10;&#10;*.mode1v3&#10;&#10;# .mode2v3: http://lists.apple.com/archives/xcode-users/2007/Oct/msg00465.html&#10;&#10;*.mode2v3&#10;&#10;# .perspectivev3: http://stackoverflow.com/questions/5223297/xcode-projects-what-is-a-perspectivev3-file&#10;&#10;*.perspectivev3&#10;&#10;#    NB: also, whitelist the default ones, some projects need to use these&#10;!default.pbxuser&#10;!default.mode1v3&#10;!default.mode2v3&#10;!default.perspectivev3&#10;&#10;&#10;####&#10;# Xcode 4 - semi-personal settings&#10;#&#10;#&#10;# OPTION 1: ---------------------------------&#10;#     throw away ALL personal settings (including custom schemes!&#10;#     - unless they are &#34;shared&#34;)&#10;#&#10;# NB: this is exclusive with OPTION 2 below&#10;xcuserdata&#10;&#10;# OPTION 2: ---------------------------------&#10;#     get rid of ALL personal settings, but KEEP SOME OF THEM&#10;#     - NB: you must manually uncomment the bits you want to keep&#10;#&#10;# NB: this *requires* git v1.8.2 or above; you may need to upgrade to latest OS X,&#10;#    or manually install git over the top of the OS X version&#10;# NB: this is exclusive with OPTION 1 above&#10;#&#10;#xcuserdata/**/*&#10;&#10;#     (requires option 2 above): Personal Schemes&#10;#&#10;#!xcuserdata/**/xcschemes/*&#10;&#10;####&#10;# XCode 4 workspaces - more detailed&#10;#&#10;# Workspaces are important! They are a core feature of Xcode - don&#39;t exclude them :)&#10;#&#10;# Workspace layout is quite spammy. For reference:&#10;#&#10;# /(root)/&#10;#   /(project-name).xcodeproj/&#10;#     project.pbxproj&#10;#     /project.xcworkspace/&#10;#       contents.xcworkspacedata&#10;#       /xcuserdata/&#10;#         /(your name)/xcuserdatad/&#10;#           UserInterfaceState.xcuserstate&#10;#     /xcsshareddata/&#10;#       /xcschemes/&#10;#         (shared scheme name).xcscheme&#10;#     /xcuserdata/&#10;#       /(your name)/xcuserdatad/&#10;#         (private scheme).xcscheme&#10;#         xcschememanagement.plist&#10;#&#10;#&#10;&#10;####&#10;# Xcode 4 - Deprecated classes&#10;#&#10;# Allegedly, if you manually &#34;deprecate&#34; your classes, they get moved here.&#10;#&#10;# We&#39;re using source-control, so this is a &#34;feature&#34; that we do not want!&#10;&#10;*.moved-aside&#10;&#10;####&#10;# OPTIONAL: Some well-known tools that people use side-by-side with Xcode / iOS development&#10;#&#10;# NB: I&#39;d rather not include these here, but gitignore&#39;s design is weak and doesn&#39;t allow&#10;#     modular gitignore: you have to put EVERYTHING in one file.&#10;#&#10;# COCOAPODS:&#10;#&#10;# c.f. http://guides.cocoapods.org/using/using-cocoapods.html#what-is-a-podfilelock&#10;# c.f. http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control&#10;#&#10;#!Podfile.lock&#10;#&#10;# RUBY:&#10;#&#10;# c.f. http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/&#10;#&#10;#!Gemfile.lock&#10;#&#10;# IDEA:&#10;#&#10;#.idea&#10;#&#10;# TEXTMATE:&#10;#&#10;# -- UNVERIFIED: c.f. http://stackoverflow.com/a/50283/153422&#10;#&#10;#tm_build_errors&#10;&#10;####&#10;# UNKNOWN: recommended by others, but I can&#39;t discover what these files are&#10;#&#10;# Community suggestions (unverified, no evidence available - DISABLED by default)&#10;#&#10;# 1. Xcode 5 - VCS file&#10;#&#10;# &#34;The data in this file not represent state of your project.&#10;# If you&#39;ll leave this file in git - you will have merge conflicts during &#10;# pull your cahnges to other&#39;s repo&#34;&#10;#&#10;#*.xccheckout&#10;*.xccheckout</span><br></pre></td></tr></table></figure>
-<h2 id="Android_studio_-gitignore_file"><a href="#Android_studio_-gitignore_file" class="headerlink" title="Android studio .gitignore file"></a>Android studio .gitignore file</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#built application files&#10;*.apk&#10;*.ap_&#10;&#10;# files for the dex VM&#10;*.dex&#10;&#10;# Java class files&#10;*.class&#10;&#10;# generated files&#10;bin/&#10;gen/&#10;&#10;# Local configuration file (sdk path, etc)&#10;local.properties&#10;&#10;# Windows thumbnail db&#10;Thumbs.db&#10;&#10;# OSX files&#10;.DS_Store&#10;&#10;# Eclipse project files&#10;.classpath&#10;.project&#10;&#10;# Android Studio&#10;*.iml&#10;.idea&#10;#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.&#10;.gradle&#10;build/&#10;&#10;#NDK&#10;obj/</span><br></pre></td></tr></table></figure>
-<h2 id="NodeJS_-gitignore_file"><a href="#NodeJS_-gitignore_file" class="headerlink" title="NodeJS .gitignore file"></a>NodeJS .gitignore file</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># Node.js&#10;&#10;.DS_Store&#10;Thumbs.db&#10;*.log&#10;&#10;lib-cov&#10;*.seed&#10;*.log&#10;*.csv&#10;*.dat&#10;*.out&#10;*.pid&#10;*.gz&#10;&#10;pids&#10;logs&#10;results&#10;&#10;npm-debug.log&#10;node_modules/&#10;&#10;# KOAN&#10;&#10;dist&#10;.tmp&#10;.nodemon&#10;bower_components/&#10;.nodemonignore&#10;.sass-cache/&#10;.bower-*/&#10;test/coverage/&#10;logs/*&#10;!.gitkeep</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/git-ignore-file/" data-id="cijuxmxkh000jt1sujrjleb6m" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/git-ignore-file/" data-id="ciknr70wp0010m3suhuj3gq52" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gitignore/">gitignore</a></li></ul>
@@ -530,7 +608,7 @@ console.log(Boolean(null));
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/Javascript 进阶/" data-id="cijuxgn26000ft1suejeat9nn" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/Javascript 进阶/" data-id="ciknr70x00014m3sur60vkf9e" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
@@ -946,7 +1024,7 @@ console.log(Boolean(null));
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/C#编码规范/" data-id="cijuxfbqm0008t1suc3p2auo4" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/C#编码规范/" data-id="ciknr70v90000m3su9qtkhvo7" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Coding/">Coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编码规范/">编码规范</a></li></ul>
@@ -994,7 +1072,7 @@ console.log(Boolean(null));
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/Elastic Search指定分析器与分析器测试/" data-id="cijuxdfqy0005t1suuhck1x8p" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/Elastic Search指定分析器与分析器测试/" data-id="ciknr70x60017m3su5ot1lcb3" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/全文检索/">全文检索</a></li></ul>
@@ -1105,7 +1183,7 @@ POST /index/fulltext/_search?pretty=true
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/中文全文检索/" data-id="cijux81860000t1suptd2h1bh" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/中文全文检索/" data-id="ciknr70wc000mm3su9npuq5mk" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/全文检索/">全文检索</a></li></ul>
@@ -1140,17 +1218,23 @@ POST /index/fulltext/_search?pretty=true
     <div class="article-entry" itemprop="articleBody">
       
         <p>姓    名：朱青玲<br>毕业院校：九江职业技术学院<br>专  业：电子设备运行与维修<br>学    历：大专<br>电子邮件：zhuqling at gmail dot com<br>现居住：广州<br>github: <a href="http://www.github.com/zhuqling" target="_blank" rel="external">http://www.github.com/zhuqling</a></p>
+<blockquote>
+<p>10年IT外贸电商从业经验，专注IT团队管理和运营<br>Banggood.com 是国内领先的外贸电商网站<br>所在公司是eBay中国第一大卖家</p>
+</blockquote>
 <h2 id="u6559_u80B2_u80CC_u666F"><a href="#u6559_u80B2_u80CC_u666F" class="headerlink" title="教育背景"></a>教育背景</h2><p>1998/09 – 2003/07：九江职业技术学院 | 电子设备运行与维修 | 大专</p>
-<h2 id="u5DE5_u4F5C_u7ECF_u5386"><a href="#u5DE5_u4F5C_u7ECF_u5386" class="headerlink" title="工作经历"></a>工作经历</h2><p>2015/11-至今 广州棒谷网络科技有限公司<br>APP技术总监 + 合伙人<br>工作职责：</p>
+<h2 id="u5DE5_u4F5C_u7ECF_u5386"><a href="#u5DE5_u4F5C_u7ECF_u5386" class="headerlink" title="工作经历"></a>工作经历</h2><h3 id="2015/11-_u81F3_u4ECA__u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8"><a href="#2015/11-_u81F3_u4ECA__u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8" class="headerlink" title="2015/11-至今 广州棒谷网络科技有限公司"></a>2015/11-至今 广州棒谷网络科技有限公司</h3><p>APP技术总监 + 合伙人</p>
+<p>工作职责：</p>
 <ol>
 <li>负责公司内部APP产品与技术</li>
 <li>APP团队组建与激励方案</li>
 </ol>
-<p>2015/3-2015/11 广州赛酷比软件公司<br>技术总监<br>工作职责：</p>
+<h3 id="2015/3-2015/11__u5E7F_u5DDE_u8D5B_u9177_u6BD4_u8F6F_u4EF6_u516C_u53F8"><a href="#2015/3-2015/11__u5E7F_u5DDE_u8D5B_u9177_u6BD4_u8F6F_u4EF6_u516C_u53F8" class="headerlink" title="2015/3-2015/11 广州赛酷比软件公司"></a>2015/3-2015/11 广州赛酷比软件公司</h3><p>技术总监</p>
+<p>工作职责：</p>
 <ol>
 <li>负责海淘项目整体技术框架</li>
-<li>组建技术团队<br>工作成果：</li>
+<li>组建技术团队</li>
 </ol>
+<p>部分工作内容：</p>
 <ul>
 <li>上哪淘 <a href="http://www.shangnatao.com" target="_blank" rel="external">http://www.shangnatao.com</a></li>
 <li>垂直电商网站爬虫 基于scrapy(python)</li>
@@ -1159,33 +1243,88 @@ POST /index/fulltext/_search?pretty=true
 <li>iO+Android APP</li>
 <li>卖家实时客服系统 基于leancloud web+client sdk</li>
 </ul>
-<p>2012/10-2015/3 广州赛酷比软件公司<br>架构组经理<br>工作职责： </p>
+<h3 id="2012/10-2015/3__u5E7F_u5DDE_u8D5B_u9177_u6BD4_u8F6F_u4EF6_u516C_u53F8"><a href="#2012/10-2015/3__u5E7F_u5DDE_u8D5B_u9177_u6BD4_u8F6F_u4EF6_u516C_u53F8" class="headerlink" title="2012/10-2015/3 广州赛酷比软件公司"></a>2012/10-2015/3 广州赛酷比软件公司</h3><p>架构组经理</p>
+<p>工作职责： </p>
 <ol>
 <li>公司软件架构管理与开发</li>
-<li>新项目调研、计划、实施、任务质量与进度控制</li>
+<li>新项目调研、计划、实施、任务质量与进度控制<br>3、对架构师、项目主管的管理 </li>
 </ol>
-<p>2009/7—2012/10：广州棒谷网络科技有限公司<br>C# ASP.Net高级开发工程师<br>工作职责：</p>
+<p>部分工作内容： </p>
+<ul>
+<li>《仓库快速发货系统》，支持单仓库1500同时在线发货，每天15万订单量，支持跨国家区域的分布式仓库，设计时兼容了绩校统一、流程优化、人机交互、最少运费/人力等因素 </li>
+<li>外贸电商ERP规划，涵盖进销存/财务/客服/人事/行政/eBay/Amazon/AliExpress等领域，适用于千万数据量的业务。 </li>
+<li>建立正规化开发流程 </li>
+<li>建立完善管理制度和奖罚措施 </li>
+<li>开展技术论坛，提升技术能力、增强项目主管管理能力</li>
+</ul>
+<h3 id="2009/7_u20142012/10_uFF1A_u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8"><a href="#2009/7_u20142012/10_uFF1A_u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8" class="headerlink" title="2009/7—2012/10：广州棒谷网络科技有限公司"></a>2009/7—2012/10：广州棒谷网络科技有限公司</h3><p>C# ASP.Net高级开发工程师</p>
+<p>部分工作内容：</p>
 <ul>
 <li>eBay二次开发</li>
 <li>国内最早eBay认证开发者，曾参加第一届eBay DevCon(SZ)</li>
 <li>eBay销售优化相关算法、自动化销售管理 技术创始人</li>
 <li>销售提升2-3倍，工作效率提升4-5倍</li>
 <li>SellerCube系统 技术创始人 <a href="http://www.sellercube.com" target="_blank" rel="external">http://www.sellercube.com</a></li>
+<li>关键字排名跟踪、自动价格跟踪</li>
+<li>智能打折，打折自动继期</li>
+<li>SmartGallery智能展示窗</li>
+<li>自动eBay订单下载，Paypal数据下载、更新发货状态</li>
+<li>DHL运单状态跟踪</li>
+<li>产品高度关联Tag页面</li>
+<li>高效顾客付款转化</li>
+<li>BestMatchAdvisor.com eBay排名分析软件</li>
 </ul>
-<p>2008/11—2009/7：广州棒谷网络科技有限公司<br>PHP高级工程师<br>工作职责：</p>
+<h3 id="2008/11_u20142009/7_uFF1A_u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8"><a href="#2008/11_u20142009/7_uFF1A_u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8" class="headerlink" title="2008/11—2009/7：广州棒谷网络科技有限公司"></a>2008/11—2009/7：广州棒谷网络科技有限公司</h3><p>PHP高级工程师<br>Banggood.com是一套功能完善的外贸网站，具有多年电子商务的经验，支持多种付款和运输方式。并与物流系统相联接。</p>
+<p>部分工作内容：</p>
 <ul>
 <li>外贸直销网站开发</li>
 <li><a href="http://www.banggood.com" target="_blank" rel="external">http://www.banggood.com</a> 技术创始人</li>
 <li>基于osCommerce二次开发</li>
 <li>编写了《osCommerce深度探密》pdf书</li>
+<li>增加Paypal国际支付，并按Paypal返回状态自动处理相关流程；</li>
+<li>增加UPS运费自动计算；</li>
+<li>原系统的MVC实现，以及前台的jQuery实现；</li>
+<li>完全改写全部模板，代码优化，采用对象缓存提高访问速度；</li>
+<li>改写后台管理，提高管理效率。</li>
 </ul>
-<p>2005/12—2008/11：科密科技发展有限公司<br>开发工程师<br>工作职责：公司门户网站开发及维护</p>
-<p>2004/10—2005/12：阳光科密股份有限公司<br>技术支持工程师<br>工作职责：从事产品的技术支持与服务、产品测试、客户问题整理与反馈、编写培训文档和说明书、以及网站维护与制作和软件UI设计等。</p>
-<p>2003/07–2004/10：九江科海<br>技术员<br>电脑硬件、软件的安装及维护、局域网的组建及维护。</p>
+<h3 id="2005/12_u20142008/11_uFF1A_u79D1_u5BC6_u79D1_u6280_u53D1_u5C55_u6709_u9650_u516C_u53F8"><a href="#2005/12_u20142008/11_uFF1A_u79D1_u5BC6_u79D1_u6280_u53D1_u5C55_u6709_u9650_u516C_u53F8" class="headerlink" title="2005/12—2008/11：科密科技发展有限公司"></a>2005/12—2008/11：科密科技发展有限公司</h3><p>开发工程师<br>工作职责：公司门户网站开发及维护</p>
+<p>部分工作内容：</p>
+<ul>
+<li>活跃员工业余生活，建立了《公司员工活动照片集》子网；</li>
+<li>对公司网站成功进行改版，规范了网站内容及提升了用户体验，实现了全自动后台管理；</li>
+<li>《文件共享系统》成功上线，解决了异地资源共享及权限分配的难题，提供了分公司、办事处及经销商下载资料的平台。</li>
+<li>开发完成《明德考勤管理系统》。改善了常规软件的操作弊端，提高了效率。</li>
+</ul>
+<h3 id="2004/10_u20142005/12_uFF1A_u9633_u5149_u79D1_u5BC6_u80A1_u4EFD_u6709_u9650_u516C_u53F8"><a href="#2004/10_u20142005/12_uFF1A_u9633_u5149_u79D1_u5BC6_u80A1_u4EFD_u6709_u9650_u516C_u53F8" class="headerlink" title="2004/10—2005/12：阳光科密股份有限公司"></a>2004/10—2005/12：阳光科密股份有限公司</h3><p>技术支持工程师</p>
+<p>工作职责：从事产品的技术支持与服务、产品测试、客户问题整理与反馈、编写培训文档和说明书、以及网站维护与制作和软件UI设计等。</p>
+<p>部分工作内容： </p>
+<ul>
+<li>开发《客户问题管理系统》（MS SQL SERVER 2000+DELPHI），解决了客户问题收集、整理、及分析的问题；</li>
+<li>开发《指纹机工具软件》(运用Delphi的类及接口封装使程序支持所有类型设备)，提高了用户的易用性；</li>
+<li>开发《USEASY增强工具》，解决用户丢失密码问题；</li>
+<li>开发集团系统集成部网站，具备产品分类及后台管理功能；</li>
+<li>开发集团OEM部门网站。</li>
+</ul>
+<h3 id="2003/07_u20132004/10_uFF1A_u4E5D_u6C5F_u79D1_u6D77"><a href="#2003/07_u20132004/10_uFF1A_u4E5D_u6C5F_u79D1_u6D77" class="headerlink" title="2003/07–2004/10：九江科海"></a>2003/07–2004/10：九江科海</h3><p>技术员<br>电脑硬件、软件的安装及维护、局域网的组建及维护。<br>期间为所在学校开发《图书馆媒体资源管理系统》，并因此获“青年志愿者先进个人”称号。</p>
 <h2 id="u5176_u5B83"><a href="#u5176_u5B83" class="headerlink" title="其它"></a>其它</h2><ul>
 <li>iOS APP <a href="https://itunes.apple.com/cn/developer/zhu-qingling/id691724651" target="_blank" rel="external">https://itunes.apple.com/cn/developer/zhu-qingling/id691724651</a></li>
 <li>博弈论</li>
 <li>经济学</li>
+<li>剑桥商务英语证书BEC1</li>
+<li>程序员中级</li>
+<li>《中国房地产图网》</li>
+<li>《图库自动抓取程序》</li>
+<li>《图库管理及发布系统》</li>
+<li>《Listen Freeer 网络音乐播放器》</li>
+<li>《音乐自动抓取和管理程序》</li>
+<li>《歌手专辑网页发布程序》</li>
+<li>《模板静态化网站管理程序》</li>
+<li>《全能网页抓取器》</li>
+<li>《Zmusic在线网页播放器内核》(javascript)</li>
+<li>《Beijing 2008 生活参考》网站</li>
+<li>《明德考勤管理系统》</li>
+<li>《PHP文件管理系统》</li>
+<li>《PHP留言系统》</li>
 </ul>
 <h2 id="IT_u6280_u672F"><a href="#IT_u6280_u672F" class="headerlink" title="IT技术"></a>IT技术</h2><ul>
 <li>delphi</li>
@@ -1197,6 +1336,7 @@ POST /index/fulltext/_search?pretty=true
 <li>kotlin</li>
 <li>arduino</li>
 <li>nodejs</li>
+<li>express</li>
 <li>koajs</li>
 <li>mongodb</li>
 <li>redis</li>
@@ -1205,12 +1345,24 @@ POST /index/fulltext/_search?pretty=true
 <li>golang</li>
 <li>erlang</li>
 <li>c</li>
+<li>ElasticSearch</li>
+<li>rabbitMQ</li>
+<li>dock</li>
+<li>bootstrap</li>
+<li>jQuery</li>
+<li>zepto</li>
+<li>backbone</li>
+<li>AngularJS</li>
+<li>ReactJS</li>
+<li>grunt</li>
+<li>python</li>
+<li>git</li>
 </ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/简历/" data-id="cijutcmtk00018fsuxlargxbw" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/简历/" data-id="ciknr70w20008m3sulbk47pif" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/banggood-com/">banggood.com</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ebay/">ebay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/棒谷/">棒谷</a></li></ul>
@@ -1233,7 +1385,7 @@ POST /index/fulltext/_search?pretty=true
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coding/">Coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/banggood-com/">banggood.com</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ebay/">ebay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitignore/">gitignore</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/全文检索/">全文检索</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术分享/">技术分享</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/棒谷/">棒谷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coding/">Coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/banggood-com/">banggood.com</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ebay/">ebay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-rebase/">git rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-revert/">git revert</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitignore/">gitignore</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/全文检索/">全文检索</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术分享/">技术分享</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/棒谷/">棒谷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -1242,7 +1394,7 @@ POST /index/fulltext/_search?pretty=true
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/tags/Elastic-Search/" style="font-size: 20px;">Elastic Search</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/banggood-com/" style="font-size: 10px;">banggood.com</a> <a href="/tags/ebay/" style="font-size: 10px;">ebay</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gitignore/" style="font-size: 10px;">gitignore</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/全文检索/" style="font-size: 20px;">全文检索</a> <a href="/tags/技术分享/" style="font-size: 10px;">技术分享</a> <a href="/tags/棒谷/" style="font-size: 10px;">棒谷</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a>
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/tags/Elastic-Search/" style="font-size: 15px;">Elastic Search</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/banggood-com/" style="font-size: 10px;">banggood.com</a> <a href="/tags/ebay/" style="font-size: 10px;">ebay</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git-rebase/" style="font-size: 10px;">git rebase</a> <a href="/tags/git-revert/" style="font-size: 10px;">git revert</a> <a href="/tags/gitignore/" style="font-size: 10px;">gitignore</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/全文检索/" style="font-size: 15px;">全文检索</a> <a href="/tags/技术分享/" style="font-size: 10px;">技术分享</a> <a href="/tags/棒谷/" style="font-size: 10px;">棒谷</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a>
     </div>
   </div>
 
@@ -1251,7 +1403,7 @@ POST /index/fulltext/_search?pretty=true
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">8</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -1263,23 +1415,23 @@ POST /index/fulltext/_search?pretty=true
       <ul>
         
           <li>
+            <a href="/2016/02/15/git-重设远程源/">git 重设远程源</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/15/git回滚到已提交的上个版本/">git回滚到已提交的上个版本</a>
+          </li>
+        
+          <li>
+            <a href="/2016/01/26/钉钉API内置图标/">钉钉API内置图标</a>
+          </li>
+        
+          <li>
             <a href="/2016/01/26/技术分享-2016-1-22/">技术分享 - 2016-1-22</a>
           </li>
         
           <li>
             <a href="/2016/01/26/git-ignore-file/">git ignore file</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/26/git-ignore-file/">git ignore file</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/26/Javascript 进阶/">Javascript 进阶</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/26/C#编码规范/">C#编码规范</a>
           </li>
         
       </ul>
