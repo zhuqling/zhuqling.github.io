@@ -68,6 +68,103 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-QQ公众UI组件自动适配UI" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/17/QQ公众UI组件自动适配UI/" class="article-date">
+  <time datetime="2016-02-17T02:18:35.000Z" itemprop="datePublished">2016-02-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/17/QQ公众UI组件自动适配UI/">QQ公众UI组件自动适配UI</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>开发时使用标准UI组件，无需考虑使用什么控件，通过加载QQ公众UI自动适配UI</p>
+<p>示例: <a href="http://isux.tencent.com/wp-content/uploads/2015/12/20151221162207754.html" target="_blank" rel="external">http://isux.tencent.com/wp-content/uploads/2015/12/20151221162207754.html</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhuqling.github.io/2016/02/17/QQ公众UI组件自动适配UI/" data-id="cikq7o8d4001babsu3ri4oj1k" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ui/">ui</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-前端冷知识" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/17/前端冷知识/" class="article-date">
+  <time datetime="2016-02-17T02:05:23.000Z" itemprop="datePublished">2016-02-17</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/17/前端冷知识/">前端冷知识</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="u6D4F_u89C8_u5668_u5730_u5740_u680F_u8FD0_u884CJavaScript_u4EE3_u7801"><a href="#u6D4F_u89C8_u5668_u5730_u5740_u680F_u8FD0_u884CJavaScript_u4EE3_u7801" class="headerlink" title="浏览器地址栏运行JavaScript代码"></a>浏览器地址栏运行JavaScript代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">javascript:alert(<span class="string">'hello from address bar :)'</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="u6D4F_u89C8_u5668_u5730_u5740_u680F_u8FD0_u884CHTML_u4EE3_u7801"><a href="#u6D4F_u89C8_u5668_u5730_u5740_u680F_u8FD0_u884CHTML_u4EE3_u7801" class="headerlink" title="浏览器地址栏运行HTML代码"></a>浏览器地址栏运行HTML代码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data:text/html,&#60;h1&#62;Hello, world!&#60;/h1&#62;</span><br></pre></td></tr></table></figure>
+<h2 id="u6D4F_u89C8_u5668_u5F53_u7F16_u8F91_u5668"><a href="#u6D4F_u89C8_u5668_u5F53_u7F16_u8F91_u5668" class="headerlink" title="浏览器当编辑器"></a>浏览器当编辑器</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data:text/html, &#60;html contenteditable&#62;</span><br></pre></td></tr></table></figure>
+<h2 id="u968F_u610F_u7F16_u8F91_u9875_u9762"><a href="#u968F_u610F_u7F16_u8F91_u9875_u9762" class="headerlink" title="随意编辑页面"></a>随意编辑页面</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">document</span>.body.contentEditable=<span class="string">'true'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="u5229_u7528a_u6807_u7B7E_u81EA_u52A8_u89E3_u6790URL"><a href="#u5229_u7528a_u6807_u7B7E_u81EA_u52A8_u89E3_u6790URL" class="headerlink" title="利用a标签自动解析URL"></a>利用a标签自动解析URL</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> a = <span class="built_in">document</span>.createElement(<span class="string">'a'</span>);</span><br><span class="line">a.href = <span class="string">'http://www.baidu.com/abc/p/'</span>;</span><br><span class="line"><span class="built_in">console</span>.log(a.host);</span><br></pre></td></tr></table></figure>
+<p>用这一原理，就得到了一个更加健壮的解析URL各部分的通用方法了。<a href="http://james.padolsey.com/javascript/parsing-urls-with-the-dom/" target="_blank" rel="external">代码请看</a></p>
+<h2 id="u52A0_u8F7DCDN_u6587_u4EF6_u65F6_uFF0C_u53EF_u4EE5_u7701_u6389HTTP_u6807_u8BC6"><a href="#u52A0_u8F7DCDN_u6587_u4EF6_u65F6_uFF0C_u53EF_u4EE5_u7701_u6389HTTP_u6807_u8BC6" class="headerlink" title="加载CDN文件时，可以省掉HTTP标识"></a>加载CDN文件时，可以省掉HTTP标识</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;script src=&#34;//domain.com/path/to/script.js&#34;&#62;&#60;/script&#62;</span><br></pre></td></tr></table></figure>
+<h2 id="u5229_u7528script_u6807_u7B7E_u4FDD_u5B58_u4EFB_u610F_u4FE1_u606F"><a href="#u5229_u7528script_u6807_u7B7E_u4FDD_u5B58_u4EFB_u610F_u4FE1_u606F" class="headerlink" title="利用script标签保存任意信息"></a>利用script标签保存任意信息</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#60;script type=&#34;text&#34; id=&#34;template&#34;&#62;&#10;&#60;h1&#62;This won&#39;t display&#60;/h1&#62;&#10;&#60;/script&#62;&#10;&#60;script&#62;&#10;var text = document.getElementById(&#39;template&#39;).innerHTML&#10;&#60;/script&#62;</span><br></pre></td></tr></table></figure>
+<h2 id="u5782_u76F4_u5C45_u4E2D"><a href="#u5782_u76F4_u5C45_u4E2D" class="headerlink" title="垂直居中"></a>垂直居中</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.center-vertical</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">top</span>:<span class="value"> <span class="number">50%</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">transform</span>:<span class="value"> <span class="function">translateY</span>(-<span class="number">50%</span>)</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u5B9E_u65F6_u7F16_u8F91CSS"><a href="#u5B9E_u65F6_u7F16_u8F91CSS" class="headerlink" title="实时编辑CSS"></a>实时编辑CSS</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="title">style</span> <span class="attribute">style</span>=<span class="value">"display:block"</span> <span class="attribute">contentEditable</span>&gt;</span><span class="css"></span><br><span class="line">            <span class="tag">body</span> <span class="rules">&#123; <span class="rule"><span class="attribute">color</span>:<span class="value"> blue </span></span></span>&#125;</span><br><span class="line">        </span><span class="tag">&lt;/<span class="title">style</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="CSS_u4E2D_u505A_u7B80_u5355_u8FD0_u7B97"><a href="#CSS_u4E2D_u505A_u7B80_u5355_u8FD0_u7B97" class="headerlink" title="CSS中做简单运算"></a>CSS中做简单运算</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.container</span><span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">background-position</span>:<span class="value"> <span class="function">calc</span>(<span class="number">100%</span> - <span class="number">50px</span>) <span class="function">calc</span>(<span class="number">100%</span> - <span class="number">20px</span>)</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="u751F_u6210_u968F_u673A_u5B57_u7B26_u4E32"><a href="#u751F_u6210_u968F_u673A_u5B57_u7B26_u4E32" class="headerlink" title="生成随机字符串"></a>生成随机字符串</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">generateRandomAlphaNum</span>(<span class="params">len</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> rdmString = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">for</span> (; rdmString.length &lt; len; rdmString += <span class="built_in">Math</span>.random().toString(<span class="number">36</span>).substr(<span class="number">2</span>));</span><br><span class="line">    <span class="keyword">return</span> rdmString.substr(<span class="number">0</span>, len);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="u6574_u6570_u7684_u64CD_u4F5C"><a href="#u6574_u6570_u7684_u64CD_u4F5C" class="headerlink" title="整数的操作"></a>整数的操作</h2><p>0和~~是很好的一个例子，使用这两者可以将浮点转成整型且效率方面要比同类的parseInt,Math.round 要快。在处理像素及动画位移等效果的时候会很有用。性能比较见此。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> foo = (<span class="number">12.4</span> / <span class="number">4.13</span>) | <span class="number">0</span>; <span class="comment">// 结果为3</span></span><br><span class="line"><span class="keyword">var</span> bar = ~~(<span class="number">12.4</span> / <span class="number">4.13</span>); <span class="comment">// 结果为3</span></span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>!!将一个值方便快速转化为布尔值 !!window===true</li>
+</ul>
+<h2 id="If_u8BED_u53E5_u7684_u53D8_u5F62"><a href="#If_u8BED_u53E5_u7684_u53D8_u5F62" class="headerlink" title="If语句的变形"></a>If语句的变形</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">error&amp;&amp;alert(<span class="string">'warning!'</span>);</span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(conditoin) alert(<span class="number">1</span>),alert(<span class="number">2</span>),<span class="built_in">console</span>.log(<span class="number">3</span>);</span><br></pre></td></tr></table></figure>
+<h2 id="u7981_u6B62_u4EE5iframe_u52A0_u8F7D_u9875_u9762"><a href="#u7981_u6B62_u4EE5iframe_u52A0_u8F7D_u9875_u9762" class="headerlink" title="禁止以iframe加载页面"></a>禁止以iframe加载页面</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="built_in">window</span>.location != <span class="built_in">window</span>.parent.location) <span class="built_in">window</span>.parent.location = <span class="built_in">window</span>.location;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhuqling.github.io/2016/02/17/前端冷知识/" data-id="cikq7o8cc000mabsud4ltdopz" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/css/">css</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/前端/">前端</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-git-重设远程源" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/02/15/git-重设远程源/" class="article-date">
@@ -95,7 +192,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/02/15/git-重设远程源/" data-id="ciknr70wj000wm3su84bxt1s0" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/02/15/git-重设远程源/" data-id="cikq7o8cn0013absuz417cek8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git-rebase/">git rebase</a></li></ul>
@@ -134,7 +231,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/02/15/git回滚到已提交的上个版本/" data-id="ciknr70wf000rm3su9ututhh8" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/02/15/git回滚到已提交的上个版本/" data-id="cikq7o8ck000yabsuaa4tj9ac" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git-revert/">git revert</a></li></ul>
@@ -174,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/钉钉API内置图标/" data-id="ciknr70vz0007m3sui7ygswx7" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/钉钉API内置图标/" data-id="cikq7o8br0007absuhi371ub7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -222,7 +319,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/技术分享-2016-1-22/" data-id="ciknr70w5000fm3su5lchy9au" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/技术分享-2016-1-22/" data-id="cikq7o8c4000fabsulrv26jbj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术分享/">技术分享</a></li></ul>
@@ -262,7 +359,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/git-ignore-file/" data-id="ciknr70wp0010m3suhuj3gq52" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/git-ignore-file/" data-id="cikq7o8cr0017absui2lw19ng" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gitignore/">gitignore</a></li></ul>
@@ -608,7 +705,7 @@ console.log(Boolean(null));
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/Javascript 进阶/" data-id="ciknr70x00014m3sur60vkf9e" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/Javascript 进阶/" data-id="cikq7o8d8001habsumic13fqp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
@@ -1024,7 +1121,7 @@ console.log(Boolean(null));
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/C#编码规范/" data-id="ciknr70v90000m3su9qtkhvo7" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/C#编码规范/" data-id="cikq7o8b90000absu34ymvphp" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Coding/">Coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编码规范/">编码规范</a></li></ul>
@@ -1072,7 +1169,7 @@ console.log(Boolean(null));
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/Elastic Search指定分析器与分析器测试/" data-id="ciknr70x60017m3su5ot1lcb3" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/Elastic Search指定分析器与分析器测试/" data-id="cikq7o8db001kabsuztn6f5zy" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/全文检索/">全文检索</a></li></ul>
@@ -1084,296 +1181,10 @@ console.log(Boolean(null));
 
 
   
-    <article id="post-中文全文检索" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/01/26/中文全文检索/" class="article-date">
-  <time datetime="2016-01-26T04:46:44.000Z" itemprop="datePublished">2016-01-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/26/中文全文检索/">中文全文检索</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="u5B89_u88C5"><a href="#u5B89_u88C5" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp elasticsearch-analysis-ik-1.2.6.jar ./plugins/analysis-ik/ # &#22797;&#21046;jar&#10;cp *.* ./config/ik/ # &#22797;&#21046;&#23383;&#24211;&#10;nano ./config/elasticsearch.yml</span><br></pre></td></tr></table></figure>
-<p>追加</p>
-<pre>
-index:
-  analysis:
-    analyzer:
-      ik:
-        alias:
-        - ik_analyzer
-        type: org.elasticsearch.index.analysis.IkAnalyzerProvider
-      ik_max_word:
-        type: ik
-        use_smart: false
-      ik_smart:
-        type: ik
-        use_smart: true
-
-#index.analysis.analyzer.default.type: keyword
-index.analysis.analyzer.default.type: ik # 设置默认分析器为ik [可选]
-</pre>
-
-<h2 id="u5220_u9664_u7D22_u5F15"><a href="#u5220_u9664_u7D22_u5F15" class="headerlink" title="删除索引"></a>删除索引</h2><p>DELETE /index</p>
-<h2 id="u521B_u5EFA_u7D22_u5F15"><a href="#u521B_u5EFA_u7D22_u5F15" class="headerlink" title="创建索引"></a>创建索引</h2><p>PUT /index</p>
-<h2 id="u8BBE_u7F6Emapping"><a href="#u8BBE_u7F6Emapping" class="headerlink" title="设置mapping"></a>设置mapping</h2><pre>
-POST /index/fulltext/_mapping
-{
-  "fulltext": {
-    "_all": {
-      "indexAnalyzer": "ik",
-      "searchAnalyzer": "ik",
-      "term_vector": "no",
-      "store": "false"
-    },
-    "properties": {
-      "content": {
-        "type": "string",
-        "store": "no",
-        "term_vector": "with_positions_offsets",
-        "indexAnalyzer": "ik",
-        "searchAnalyzer": "ik",
-        "include_in_all": "true",
-        "boost": 8
-      }
-    }
-  }
-}
-</pre>
-
-<h2 id="u68C0_u67E5mapping"><a href="#u68C0_u67E5mapping" class="headerlink" title="检查mapping"></a>检查mapping</h2><p>GET /index/fulltext/_mapping</p>
-<h2 id="u5EFA_u7ACB_u7D22_u5F15"><a href="#u5EFA_u7ACB_u7D22_u5F15" class="headerlink" title="建立索引"></a>建立索引</h2><pre>
-POST /index/fulltext/_bulk
-{"index":{"_id":1}}
-{content:"美国留给伊拉克的是个烂摊子吗"}
-{"index":{"_id":2}}
-{content:"公安部：各地校车将享最高路权"}
-{"index":{"_id":3}}
-{content:"中韩渔警冲突调查：韩警平均每天扣1艘中国渔船"}
-{"index":{"_id":4}}
-{content:"中国驻洛杉矶领事馆遭亚裔男子枪击 嫌犯已自首"}
-</pre>
-
-<h2 id="u641C_u7D22"><a href="#u641C_u7D22" class="headerlink" title="搜索"></a>搜索</h2><pre>
-POST /index/fulltext/_search?pretty=true
-{
-    "query" : { "term" : { "content" : "烂摊子" }},
-    "highlight" : {
-        "pre_tags" : ["<tag1>", "<tag2>"],
-        "post_tags" : ["</tag2></tag1>", ""],
-        "fields" : {
-            "content" : {}
-        }
-    }
-}
-</pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/中文全文检索/" data-id="ciknr70wc000mm3su9npuq5mk" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/全文检索/">全文检索</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-简历" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/01/26/简历/" class="article-date">
-  <time datetime="2016-01-26T02:58:20.000Z" itemprop="datePublished">2016-01-26</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/01/26/简历/">简历</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>姓    名：朱青玲<br>毕业院校：九江职业技术学院<br>专  业：电子设备运行与维修<br>学    历：大专<br>电子邮件：zhuqling at gmail dot com<br>现居住：广州<br>github: <a href="http://www.github.com/zhuqling" target="_blank" rel="external">http://www.github.com/zhuqling</a></p>
-<blockquote>
-<p>10年IT外贸电商从业经验，专注IT团队管理和运营<br>Banggood.com 是国内领先的外贸电商网站<br>所在公司是eBay中国第一大卖家</p>
-</blockquote>
-<h2 id="u6559_u80B2_u80CC_u666F"><a href="#u6559_u80B2_u80CC_u666F" class="headerlink" title="教育背景"></a>教育背景</h2><p>1998/09 – 2003/07：九江职业技术学院 | 电子设备运行与维修 | 大专</p>
-<h2 id="u5DE5_u4F5C_u7ECF_u5386"><a href="#u5DE5_u4F5C_u7ECF_u5386" class="headerlink" title="工作经历"></a>工作经历</h2><h3 id="2015/11-_u81F3_u4ECA__u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8"><a href="#2015/11-_u81F3_u4ECA__u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8" class="headerlink" title="2015/11-至今 广州棒谷网络科技有限公司"></a>2015/11-至今 广州棒谷网络科技有限公司</h3><p>APP技术总监 + 合伙人</p>
-<p>工作职责：</p>
-<ol>
-<li>负责公司内部APP产品与技术</li>
-<li>APP团队组建与激励方案</li>
-</ol>
-<h3 id="2015/3-2015/11__u5E7F_u5DDE_u8D5B_u9177_u6BD4_u8F6F_u4EF6_u516C_u53F8"><a href="#2015/3-2015/11__u5E7F_u5DDE_u8D5B_u9177_u6BD4_u8F6F_u4EF6_u516C_u53F8" class="headerlink" title="2015/3-2015/11 广州赛酷比软件公司"></a>2015/3-2015/11 广州赛酷比软件公司</h3><p>技术总监</p>
-<p>工作职责：</p>
-<ol>
-<li>负责海淘项目整体技术框架</li>
-<li>组建技术团队</li>
-</ol>
-<p>部分工作内容：</p>
-<ul>
-<li>上哪淘 <a href="http://www.shangnatao.com" target="_blank" rel="external">http://www.shangnatao.com</a></li>
-<li>垂直电商网站爬虫 基于scrapy(python)</li>
-<li>多卖家电商平台后台系统 (NodeJS+MongoDB+Redis+QUI), QUI是在bootstrap基础上扩展的一套UI库</li>
-<li>电商APP API (KoaJS)</li>
-<li>iO+Android APP</li>
-<li>卖家实时客服系统 基于leancloud web+client sdk</li>
-</ul>
-<h3 id="2012/10-2015/3__u5E7F_u5DDE_u8D5B_u9177_u6BD4_u8F6F_u4EF6_u516C_u53F8"><a href="#2012/10-2015/3__u5E7F_u5DDE_u8D5B_u9177_u6BD4_u8F6F_u4EF6_u516C_u53F8" class="headerlink" title="2012/10-2015/3 广州赛酷比软件公司"></a>2012/10-2015/3 广州赛酷比软件公司</h3><p>架构组经理</p>
-<p>工作职责： </p>
-<ol>
-<li>公司软件架构管理与开发</li>
-<li>新项目调研、计划、实施、任务质量与进度控制<br>3、对架构师、项目主管的管理 </li>
-</ol>
-<p>部分工作内容： </p>
-<ul>
-<li>《仓库快速发货系统》，支持单仓库1500同时在线发货，每天15万订单量，支持跨国家区域的分布式仓库，设计时兼容了绩校统一、流程优化、人机交互、最少运费/人力等因素 </li>
-<li>外贸电商ERP规划，涵盖进销存/财务/客服/人事/行政/eBay/Amazon/AliExpress等领域，适用于千万数据量的业务。 </li>
-<li>建立正规化开发流程 </li>
-<li>建立完善管理制度和奖罚措施 </li>
-<li>开展技术论坛，提升技术能力、增强项目主管管理能力</li>
-</ul>
-<h3 id="2009/7_u20142012/10_uFF1A_u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8"><a href="#2009/7_u20142012/10_uFF1A_u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8" class="headerlink" title="2009/7—2012/10：广州棒谷网络科技有限公司"></a>2009/7—2012/10：广州棒谷网络科技有限公司</h3><p>C# ASP.Net高级开发工程师</p>
-<p>部分工作内容：</p>
-<ul>
-<li>eBay二次开发</li>
-<li>国内最早eBay认证开发者，曾参加第一届eBay DevCon(SZ)</li>
-<li>eBay销售优化相关算法、自动化销售管理 技术创始人</li>
-<li>销售提升2-3倍，工作效率提升4-5倍</li>
-<li>SellerCube系统 技术创始人 <a href="http://www.sellercube.com" target="_blank" rel="external">http://www.sellercube.com</a></li>
-<li>关键字排名跟踪、自动价格跟踪</li>
-<li>智能打折，打折自动继期</li>
-<li>SmartGallery智能展示窗</li>
-<li>自动eBay订单下载，Paypal数据下载、更新发货状态</li>
-<li>DHL运单状态跟踪</li>
-<li>产品高度关联Tag页面</li>
-<li>高效顾客付款转化</li>
-<li>BestMatchAdvisor.com eBay排名分析软件</li>
-</ul>
-<h3 id="2008/11_u20142009/7_uFF1A_u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8"><a href="#2008/11_u20142009/7_uFF1A_u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8" class="headerlink" title="2008/11—2009/7：广州棒谷网络科技有限公司"></a>2008/11—2009/7：广州棒谷网络科技有限公司</h3><p>PHP高级工程师<br>Banggood.com是一套功能完善的外贸网站，具有多年电子商务的经验，支持多种付款和运输方式。并与物流系统相联接。</p>
-<p>部分工作内容：</p>
-<ul>
-<li>外贸直销网站开发</li>
-<li><a href="http://www.banggood.com" target="_blank" rel="external">http://www.banggood.com</a> 技术创始人</li>
-<li>基于osCommerce二次开发</li>
-<li>编写了《osCommerce深度探密》pdf书</li>
-<li>增加Paypal国际支付，并按Paypal返回状态自动处理相关流程；</li>
-<li>增加UPS运费自动计算；</li>
-<li>原系统的MVC实现，以及前台的jQuery实现；</li>
-<li>完全改写全部模板，代码优化，采用对象缓存提高访问速度；</li>
-<li>改写后台管理，提高管理效率。</li>
-</ul>
-<h3 id="2005/12_u20142008/11_uFF1A_u79D1_u5BC6_u79D1_u6280_u53D1_u5C55_u6709_u9650_u516C_u53F8"><a href="#2005/12_u20142008/11_uFF1A_u79D1_u5BC6_u79D1_u6280_u53D1_u5C55_u6709_u9650_u516C_u53F8" class="headerlink" title="2005/12—2008/11：科密科技发展有限公司"></a>2005/12—2008/11：科密科技发展有限公司</h3><p>开发工程师<br>工作职责：公司门户网站开发及维护</p>
-<p>部分工作内容：</p>
-<ul>
-<li>活跃员工业余生活，建立了《公司员工活动照片集》子网；</li>
-<li>对公司网站成功进行改版，规范了网站内容及提升了用户体验，实现了全自动后台管理；</li>
-<li>《文件共享系统》成功上线，解决了异地资源共享及权限分配的难题，提供了分公司、办事处及经销商下载资料的平台。</li>
-<li>开发完成《明德考勤管理系统》。改善了常规软件的操作弊端，提高了效率。</li>
-</ul>
-<h3 id="2004/10_u20142005/12_uFF1A_u9633_u5149_u79D1_u5BC6_u80A1_u4EFD_u6709_u9650_u516C_u53F8"><a href="#2004/10_u20142005/12_uFF1A_u9633_u5149_u79D1_u5BC6_u80A1_u4EFD_u6709_u9650_u516C_u53F8" class="headerlink" title="2004/10—2005/12：阳光科密股份有限公司"></a>2004/10—2005/12：阳光科密股份有限公司</h3><p>技术支持工程师</p>
-<p>工作职责：从事产品的技术支持与服务、产品测试、客户问题整理与反馈、编写培训文档和说明书、以及网站维护与制作和软件UI设计等。</p>
-<p>部分工作内容： </p>
-<ul>
-<li>开发《客户问题管理系统》（MS SQL SERVER 2000+DELPHI），解决了客户问题收集、整理、及分析的问题；</li>
-<li>开发《指纹机工具软件》(运用Delphi的类及接口封装使程序支持所有类型设备)，提高了用户的易用性；</li>
-<li>开发《USEASY增强工具》，解决用户丢失密码问题；</li>
-<li>开发集团系统集成部网站，具备产品分类及后台管理功能；</li>
-<li>开发集团OEM部门网站。</li>
-</ul>
-<h3 id="2003/07_u20132004/10_uFF1A_u4E5D_u6C5F_u79D1_u6D77"><a href="#2003/07_u20132004/10_uFF1A_u4E5D_u6C5F_u79D1_u6D77" class="headerlink" title="2003/07–2004/10：九江科海"></a>2003/07–2004/10：九江科海</h3><p>技术员<br>电脑硬件、软件的安装及维护、局域网的组建及维护。<br>期间为所在学校开发《图书馆媒体资源管理系统》，并因此获“青年志愿者先进个人”称号。</p>
-<h2 id="u5176_u5B83"><a href="#u5176_u5B83" class="headerlink" title="其它"></a>其它</h2><ul>
-<li>iOS APP <a href="https://itunes.apple.com/cn/developer/zhu-qingling/id691724651" target="_blank" rel="external">https://itunes.apple.com/cn/developer/zhu-qingling/id691724651</a></li>
-<li>博弈论</li>
-<li>经济学</li>
-<li>剑桥商务英语证书BEC1</li>
-<li>程序员中级</li>
-<li>《中国房地产图网》</li>
-<li>《图库自动抓取程序》</li>
-<li>《图库管理及发布系统》</li>
-<li>《Listen Freeer 网络音乐播放器》</li>
-<li>《音乐自动抓取和管理程序》</li>
-<li>《歌手专辑网页发布程序》</li>
-<li>《模板静态化网站管理程序》</li>
-<li>《全能网页抓取器》</li>
-<li>《Zmusic在线网页播放器内核》(javascript)</li>
-<li>《Beijing 2008 生活参考》网站</li>
-<li>《明德考勤管理系统》</li>
-<li>《PHP文件管理系统》</li>
-<li>《PHP留言系统》</li>
-</ul>
-<h2 id="IT_u6280_u672F"><a href="#IT_u6280_u672F" class="headerlink" title="IT技术"></a>IT技术</h2><ul>
-<li>delphi</li>
-<li>php</li>
-<li>c#</li>
-<li>asp.net</li>
-<li>objective-c</li>
-<li>swift</li>
-<li>kotlin</li>
-<li>arduino</li>
-<li>nodejs</li>
-<li>express</li>
-<li>koajs</li>
-<li>mongodb</li>
-<li>redis</li>
-<li>ms sql server</li>
-<li>mysql</li>
-<li>golang</li>
-<li>erlang</li>
-<li>c</li>
-<li>ElasticSearch</li>
-<li>rabbitMQ</li>
-<li>dock</li>
-<li>bootstrap</li>
-<li>jQuery</li>
-<li>zepto</li>
-<li>backbone</li>
-<li>AngularJS</li>
-<li>ReactJS</li>
-<li>grunt</li>
-<li>python</li>
-<li>git</li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/简历/" data-id="ciknr70w20008m3sulbk47pif" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/banggood-com/">banggood.com</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ebay/">ebay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/棒谷/">棒谷</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </section>
         
@@ -1385,7 +1196,7 @@ POST /index/fulltext/_search?pretty=true
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coding/">Coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/banggood-com/">banggood.com</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ebay/">ebay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-rebase/">git rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-revert/">git revert</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitignore/">gitignore</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/全文检索/">全文检索</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术分享/">技术分享</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/棒谷/">棒谷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coding/">Coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/banggood-com/">banggood.com</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ebay/">ebay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-rebase/">git rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-revert/">git revert</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitignore/">gitignore</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui/">ui</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/全文检索/">全文检索</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术分享/">技术分享</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/棒谷/">棒谷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -1394,7 +1205,7 @@ POST /index/fulltext/_search?pretty=true
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/tags/Elastic-Search/" style="font-size: 15px;">Elastic Search</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/banggood-com/" style="font-size: 10px;">banggood.com</a> <a href="/tags/ebay/" style="font-size: 10px;">ebay</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git-rebase/" style="font-size: 10px;">git rebase</a> <a href="/tags/git-revert/" style="font-size: 10px;">git revert</a> <a href="/tags/gitignore/" style="font-size: 10px;">gitignore</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/全文检索/" style="font-size: 15px;">全文检索</a> <a href="/tags/技术分享/" style="font-size: 10px;">技术分享</a> <a href="/tags/棒谷/" style="font-size: 10px;">棒谷</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a>
+      <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/tags/Elastic-Search/" style="font-size: 15px;">Elastic Search</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/banggood-com/" style="font-size: 10px;">banggood.com</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/ebay/" style="font-size: 10px;">ebay</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git-rebase/" style="font-size: 10px;">git rebase</a> <a href="/tags/git-revert/" style="font-size: 10px;">git revert</a> <a href="/tags/gitignore/" style="font-size: 10px;">gitignore</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/ui/" style="font-size: 10px;">ui</a> <a href="/tags/全文检索/" style="font-size: 15px;">全文检索</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/技术分享/" style="font-size: 10px;">技术分享</a> <a href="/tags/棒谷/" style="font-size: 10px;">棒谷</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a>
     </div>
   </div>
 
@@ -1403,7 +1214,7 @@ POST /index/fulltext/_search?pretty=true
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">8</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -1415,6 +1226,14 @@ POST /index/fulltext/_search?pretty=true
       <ul>
         
           <li>
+            <a href="/2016/02/17/QQ公众UI组件自动适配UI/">QQ公众UI组件自动适配UI</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/17/前端冷知识/">前端冷知识</a>
+          </li>
+        
+          <li>
             <a href="/2016/02/15/git-重设远程源/">git 重设远程源</a>
           </li>
         
@@ -1424,14 +1243,6 @@ POST /index/fulltext/_search?pretty=true
         
           <li>
             <a href="/2016/01/26/钉钉API内置图标/">钉钉API内置图标</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/26/技术分享-2016-1-22/">技术分享 - 2016-1-22</a>
-          </li>
-        
-          <li>
-            <a href="/2016/01/26/git-ignore-file/">git ignore file</a>
           </li>
         
       </ul>
