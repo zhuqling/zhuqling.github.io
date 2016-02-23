@@ -3,30 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>通过http代理访问ssh | Zhu Qingling</title>
+  <title>Fiddle调试iOS/Android APP SSL安全证书的方法 | Zhu Qingling</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="淘宝TAE服务器需要通过http代理才能直接ssh访问实例，首先尝试了使用了nc1ssh -p PORT USER@IP -o &quot;ProxyCommand=nc -X connect -x sshproxy.tae.aliyun.com:3128 %h %p&quot;
+  <meta name="description" content="在调试APP时，Fiddler是个很好用的工具，当调试SSL接口时，需要做一些配置才能绕过SSL证书的限制。
 
--X 指定协议，connect代表HTTP
-
-但是nc命令不支持有账号密码的http代理。所以改用corkscrew。在osx下可以直接">
+进入菜单：Tools &amp;gt; Fiddler Options &amp;gt; Connections. 勾选：Allow remote computers to connect.
+设置iOS或Android的代理，注意IP和端口都要正确
+下载 CertMaker for iOS and An">
 <meta property="og:type" content="article">
-<meta property="og:title" content="通过http代理访问ssh">
-<meta property="og:url" content="http://zhuqling.github.io/2016/02/18/通过http代理访问ssh/index.html">
+<meta property="og:title" content="Fiddle调试iOS/Android APP SSL安全证书的方法">
+<meta property="og:url" content="http://zhuqling.github.io/2016/02/23/Fiddle调试iOS-Android-APP-SSL安全证书的方法/index.html">
 <meta property="og:site_name" content="Zhu Qingling">
-<meta property="og:description" content="淘宝TAE服务器需要通过http代理才能直接ssh访问实例，首先尝试了使用了nc1ssh -p PORT USER@IP -o &quot;ProxyCommand=nc -X connect -x sshproxy.tae.aliyun.com:3128 %h %p&quot;
+<meta property="og:description" content="在调试APP时，Fiddler是个很好用的工具，当调试SSL接口时，需要做一些配置才能绕过SSL证书的限制。
 
--X 指定协议，connect代表HTTP
-
-但是nc命令不支持有账号密码的http代理。所以改用corkscrew。在osx下可以直接">
-<meta property="og:updated_time" content="2016-02-18T01:49:49.000Z">
+进入菜单：Tools &amp;gt; Fiddler Options &amp;gt; Connections. 勾选：Allow remote computers to connect.
+设置iOS或Android的代理，注意IP和端口都要正确
+下载 CertMaker for iOS and An">
+<meta property="og:updated_time" content="2016-02-23T07:49:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="通过http代理访问ssh">
-<meta name="twitter:description" content="淘宝TAE服务器需要通过http代理才能直接ssh访问实例，首先尝试了使用了nc1ssh -p PORT USER@IP -o &quot;ProxyCommand=nc -X connect -x sshproxy.tae.aliyun.com:3128 %h %p&quot;
+<meta name="twitter:title" content="Fiddle调试iOS/Android APP SSL安全证书的方法">
+<meta name="twitter:description" content="在调试APP时，Fiddler是个很好用的工具，当调试SSL接口时，需要做一些配置才能绕过SSL证书的限制。
 
--X 指定协议，connect代表HTTP
-
-但是nc命令不支持有账号密码的http代理。所以改用corkscrew。在osx下可以直接">
+进入菜单：Tools &amp;gt; Fiddler Options &amp;gt; Connections. 勾选：Allow remote computers to connect.
+设置iOS或Android的代理，注意IP和端口都要正确
+下载 CertMaker for iOS and An">
 <meta name="twitter:creator" content="@zhuqling">
   
     <link rel="alternative" href="/atom.xml" title="Zhu Qingling" type="application/atom+xml">
@@ -79,10 +79,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-通过http代理访问ssh" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Fiddle调试iOS-Android-APP-SSL安全证书的方法" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2016/02/18/通过http代理访问ssh/" class="article-date">
-  <time datetime="2016-02-18T01:39:56.000Z" itemprop="datePublished">2016-02-18</time>
+    <a href="/2016/02/23/Fiddle调试iOS-Android-APP-SSL安全证书的方法/" class="article-date">
+  <time datetime="2016-02-23T07:41:08.000Z" itemprop="datePublished">2016-02-23</time>
 </a>
     
   </div>
@@ -93,7 +93,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      通过http代理访问ssh
+      Fiddle调试iOS/Android APP SSL安全证书的方法
     </h1>
   
 
@@ -101,24 +101,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>淘宝TAE服务器需要通过http代理才能直接ssh访问实例，首先尝试了使用了nc<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -p PORT USER@IP -o <span class="string">"ProxyCommand=nc -X connect -x sshproxy.tae.aliyun.com:3128 %h %p"</span></span><br></pre></td></tr></table></figure></p>
+        <p>在调试APP时，Fiddler是个很好用的工具，当调试SSL接口时，需要做一些配置才能绕过SSL证书的限制。</p>
+<ol>
+<li>进入菜单：Tools &gt; Fiddler Options &gt; Connections. 勾选：Allow remote computers to connect.</li>
+<li>设置iOS或Android的代理，注意IP和端口都要正确</li>
+<li>下载 CertMaker for iOS and Android 插件，下载地址：<a href="http://www.telerik.com/fiddler/add-ons" target="_blank" rel="external">http://www.telerik.com/fiddler/add-ons</a></li>
+<li>重启Fiddler</li>
+<li>用iPhone或Android手机打开： <a href="http://ipv4.fiddler:8888，如果不能访问请使用ip进行访问" target="_blank" rel="external">http://ipv4.fiddler:8888，如果不能访问请使用ip进行访问</a></li>
+<li>点击最下面的“FiddlerRoot certificate”链接，确认安装证书</li>
+<li>再进入Fiddler，就可以查看SSL接口的数据了</li>
+</ol>
 <ul>
-<li>-X 指定协议，connect代表HTTP</li>
+<li>如果还是无法生效，可以右键点击连接，添加URL到proxy列表。</li>
 </ul>
-<p>但是nc命令不支持有账号密码的http代理。所以改用corkscrew。<br>在osx下可以直接<code>brew install corkscrew</code></p>
-<p>为了不用每次都输入那么长的命令，可以将配置信息写入ssh config文件。</p>
-<p>.ssh/config<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Host IP</span><br><span class="line">  Port PORT</span><br><span class="line">  ProxyCommand corkscrew sshproxy.tae.aliyun.com <span class="number">3128</span> %h %p ~/.ssh/proxyauth</span><br><span class="line">  ServerAliveInterval   <span class="number">10</span></span><br></pre></td></tr></table></figure></p>
-<p>.ssh/proxyauth<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PROXY_USER:PROXY_PASSWORD</span><br></pre></td></tr></table></figure></p>
-<p>以后只需要和平时ssh一样执行<code>ssh USER@IP</code>即可。</p>
-<p>题外话：淘宝TAE有两个免费的实例配额，建议创建一个nginx实例，可以有子域名支持外网访问，并且是root权限。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/02/18/通过http代理访问ssh/" data-id="cikz434wr0008lrsul6zeserv" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/02/23/Fiddle调试iOS-Android-APP-SSL安全证书的方法/" data-id="cikz434y7001tlrsunpa8q3gr" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/corkscrew/">corkscrew</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/http-proxy/">http proxy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nc/">nc</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ssh/">ssh</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Fiddler/">Fiddler</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SSL-debug/">SSL debug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/iOS/">iOS</a></li></ul>
 
     </footer>
   </div>
@@ -126,19 +129,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/02/23/Fiddle调试iOS-Android-APP-SSL安全证书的方法/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Fiddle调试iOS/Android APP SSL安全证书的方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/02/17/QQ公众UI组件自动适配UI/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2016/02/18/通过http代理访问ssh/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">QQ公众UI组件自动适配UI</div>
+      <div class="article-nav-title">通过http代理访问ssh</div>
     </a>
   
 </nav>
