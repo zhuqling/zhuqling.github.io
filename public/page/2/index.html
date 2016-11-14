@@ -68,6 +68,392 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-git-ignore-file" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/26/git-ignore-file/" class="article-date">
+  <time datetime="2016-01-26T04:54:46.000Z" itemprop="datePublished">2016-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/26/git-ignore-file/">git ignore file</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Xcode_-gitignore_file"><a href="#Xcode_-gitignore_file" class="headerlink" title="Xcode .gitignore file"></a>Xcode .gitignore file</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#########################&#10;# .gitignore file for Xcode4 and Xcode5 Source projects&#10;#&#10;# Apple bugs, waiting for Apple to fix/respond:&#10;#&#10;#    15564624 - what does the xccheckout file in Xcode5 do? Where&#39;s the documentation?&#10;#&#10;# Version 2.3&#10;# For latest version, see: http://stackoverflow.com/questions/49478/git-ignore-file-for-xcode-projects&#10;#&#10;# 2014 updates:&#10;# - appended non-standard items DISABLED by default (uncomment if you use those tools)&#10;# - removed the edit that an SO.com moderator made without bothering to ask me&#10;# - researched CocoaPods .lock more carefully, thanks to Gokhan Celiker&#10;# 2013 updates:&#10;# - fixed the broken &#34;save personal Schemes&#34;&#10;# - added line-by-line explanations for EVERYTHING (some were missing)&#10;#&#10;# NB: if you are storing &#34;built&#34; products, this WILL NOT WORK,&#10;# and you should use a different .gitignore (or none at all)&#10;# This file is for SOURCE projects, where there are many extra&#10;# files that we want to exclude&#10;#&#10;#########################&#10;&#10;#####&#10;# OS X temporary files that should never be committed&#10;#&#10;# c.f. http://www.westwind.com/reference/os-x/invisibles.html&#10;&#10;.DS_Store&#10;&#10;# c.f. http://www.westwind.com/reference/os-x/invisibles.html&#10;&#10;.Trashes&#10;&#10;# c.f. http://www.westwind.com/reference/os-x/invisibles.html&#10;&#10;*.swp&#10;&#10;#&#10;# *.lock - this is used and abused by many editors for many different things.&#10;#    For the main ones I use (e.g. Eclipse), it should be excluded &#10;#    from source-control, but YMMV.&#10;#   (lock files are usually local-only file-synchronization on the local FS that should NOT go in git)&#10;# c.f. the &#34;OPTIONAL&#34; section at bottom though, for tool-specific variations!&#10;&#10;*.lock&#10;&#10;&#10;#&#10;# profile - REMOVED temporarily (on double-checking, I can&#39;t find it in OS X docs?)&#10;#profile&#10;&#10;&#10;####&#10;# Xcode temporary files that should never be committed&#10;# &#10;# NB: NIB/XIB files still exist even on Storyboard projects, so we want this...&#10;&#10;*~.nib&#10;&#10;&#10;####&#10;# Xcode build files -&#10;#&#10;# NB: slash on the end, so we only remove the FOLDER, not any files that were badly named &#34;DerivedData&#34;&#10;&#10;DerivedData/&#10;&#10;# NB: slash on the end, so we only remove the FOLDER, not any files that were badly named &#34;build&#34;&#10;&#10;build/&#10;&#10;&#10;#####&#10;# Xcode private settings (window sizes, bookmarks, breakpoints, custom executables, smart groups)&#10;#&#10;# This is complicated:&#10;#&#10;# SOMETIMES you need to put this file in version control.&#10;# Apple designed it poorly - if you use &#34;custom executables&#34;, they are&#10;#  saved in this file.&#10;# 99% of projects do NOT use those, so they do NOT want to version control this file.&#10;#  ..but if you&#39;re in the 1%, comment out the line &#34;*.pbxuser&#34;&#10;&#10;# .pbxuser: http://lists.apple.com/archives/xcode-users/2004/Jan/msg00193.html&#10;&#10;*.pbxuser&#10;&#10;# .mode1v3: http://lists.apple.com/archives/xcode-users/2007/Oct/msg00465.html&#10;&#10;*.mode1v3&#10;&#10;# .mode2v3: http://lists.apple.com/archives/xcode-users/2007/Oct/msg00465.html&#10;&#10;*.mode2v3&#10;&#10;# .perspectivev3: http://stackoverflow.com/questions/5223297/xcode-projects-what-is-a-perspectivev3-file&#10;&#10;*.perspectivev3&#10;&#10;#    NB: also, whitelist the default ones, some projects need to use these&#10;!default.pbxuser&#10;!default.mode1v3&#10;!default.mode2v3&#10;!default.perspectivev3&#10;&#10;&#10;####&#10;# Xcode 4 - semi-personal settings&#10;#&#10;#&#10;# OPTION 1: ---------------------------------&#10;#     throw away ALL personal settings (including custom schemes!&#10;#     - unless they are &#34;shared&#34;)&#10;#&#10;# NB: this is exclusive with OPTION 2 below&#10;xcuserdata&#10;&#10;# OPTION 2: ---------------------------------&#10;#     get rid of ALL personal settings, but KEEP SOME OF THEM&#10;#     - NB: you must manually uncomment the bits you want to keep&#10;#&#10;# NB: this *requires* git v1.8.2 or above; you may need to upgrade to latest OS X,&#10;#    or manually install git over the top of the OS X version&#10;# NB: this is exclusive with OPTION 1 above&#10;#&#10;#xcuserdata/**/*&#10;&#10;#     (requires option 2 above): Personal Schemes&#10;#&#10;#!xcuserdata/**/xcschemes/*&#10;&#10;####&#10;# XCode 4 workspaces - more detailed&#10;#&#10;# Workspaces are important! They are a core feature of Xcode - don&#39;t exclude them :)&#10;#&#10;# Workspace layout is quite spammy. For reference:&#10;#&#10;# /(root)/&#10;#   /(project-name).xcodeproj/&#10;#     project.pbxproj&#10;#     /project.xcworkspace/&#10;#       contents.xcworkspacedata&#10;#       /xcuserdata/&#10;#         /(your name)/xcuserdatad/&#10;#           UserInterfaceState.xcuserstate&#10;#     /xcsshareddata/&#10;#       /xcschemes/&#10;#         (shared scheme name).xcscheme&#10;#     /xcuserdata/&#10;#       /(your name)/xcuserdatad/&#10;#         (private scheme).xcscheme&#10;#         xcschememanagement.plist&#10;#&#10;#&#10;&#10;####&#10;# Xcode 4 - Deprecated classes&#10;#&#10;# Allegedly, if you manually &#34;deprecate&#34; your classes, they get moved here.&#10;#&#10;# We&#39;re using source-control, so this is a &#34;feature&#34; that we do not want!&#10;&#10;*.moved-aside&#10;&#10;####&#10;# OPTIONAL: Some well-known tools that people use side-by-side with Xcode / iOS development&#10;#&#10;# NB: I&#39;d rather not include these here, but gitignore&#39;s design is weak and doesn&#39;t allow&#10;#     modular gitignore: you have to put EVERYTHING in one file.&#10;#&#10;# COCOAPODS:&#10;#&#10;# c.f. http://guides.cocoapods.org/using/using-cocoapods.html#what-is-a-podfilelock&#10;# c.f. http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control&#10;#&#10;#!Podfile.lock&#10;#&#10;# RUBY:&#10;#&#10;# c.f. http://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/&#10;#&#10;#!Gemfile.lock&#10;#&#10;# IDEA:&#10;#&#10;#.idea&#10;#&#10;# TEXTMATE:&#10;#&#10;# -- UNVERIFIED: c.f. http://stackoverflow.com/a/50283/153422&#10;#&#10;#tm_build_errors&#10;&#10;####&#10;# UNKNOWN: recommended by others, but I can&#39;t discover what these files are&#10;#&#10;# Community suggestions (unverified, no evidence available - DISABLED by default)&#10;#&#10;# 1. Xcode 5 - VCS file&#10;#&#10;# &#34;The data in this file not represent state of your project.&#10;# If you&#39;ll leave this file in git - you will have merge conflicts during &#10;# pull your cahnges to other&#39;s repo&#34;&#10;#&#10;#*.xccheckout&#10;*.xccheckout</span><br></pre></td></tr></table></figure>
+<h2 id="Android_studio_-gitignore_file"><a href="#Android_studio_-gitignore_file" class="headerlink" title="Android studio .gitignore file"></a>Android studio .gitignore file</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#built application files&#10;*.apk&#10;*.ap_&#10;&#10;# files for the dex VM&#10;*.dex&#10;&#10;# Java class files&#10;*.class&#10;&#10;# generated files&#10;bin/&#10;gen/&#10;&#10;# Local configuration file (sdk path, etc)&#10;local.properties&#10;&#10;# Windows thumbnail db&#10;Thumbs.db&#10;&#10;# OSX files&#10;.DS_Store&#10;&#10;# Eclipse project files&#10;.classpath&#10;.project&#10;&#10;# Android Studio&#10;*.iml&#10;.idea&#10;#.idea/workspace.xml - remove # and delete .idea if it better suit your needs.&#10;.gradle&#10;build/&#10;&#10;#NDK&#10;obj/</span><br></pre></td></tr></table></figure>
+<h2 id="NodeJS_-gitignore_file"><a href="#NodeJS_-gitignore_file" class="headerlink" title="NodeJS .gitignore file"></a>NodeJS .gitignore file</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># Node.js&#10;&#10;.DS_Store&#10;Thumbs.db&#10;*.log&#10;&#10;lib-cov&#10;*.seed&#10;*.log&#10;*.csv&#10;*.dat&#10;*.out&#10;*.pid&#10;*.gz&#10;&#10;pids&#10;logs&#10;results&#10;&#10;npm-debug.log&#10;node_modules/&#10;&#10;# KOAN&#10;&#10;dist&#10;.tmp&#10;.nodemon&#10;bower_components/&#10;.nodemonignore&#10;.sass-cache/&#10;.bower-*/&#10;test/coverage/&#10;logs/*&#10;!.gitkeep</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhuqling.github.io/2016/01/26/git-ignore-file/" data-id="civhumxlh001ssnsuziro4auw" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gitignore/">gitignore</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Javascript 进阶" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/01/26/Javascript 进阶/" class="article-date">
+  <time datetime="2016-01-26T04:53:00.000Z" itemprop="datePublished">2016-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/01/26/Javascript 进阶/">Javascript 进阶</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Head_object/Global_object"><a href="#Head_object/Global_object" class="headerlink" title="Head object/Global object"></a>Head object/Global object</h2><ul>
+<li>Head object只有一个，即window</li>
+<li>Global object为全局变量（函数也是变量），它们的上级是Head object</li>
+</ul>
+<pre>
+var name = 'jason chuh';
+var title = 'Mr.';
+var walk = function(){
+    console.log('我在走路...');
+};
+console.log('name' in window);
+console.log('title' in window);
+console.log('walk' in window);
+
+console.log(window['name']);
+console.log(window['title']);
+console.log(window['walk']);
+</pre>
+
+<h3 id="var__u58F0_u660E"><a href="#var__u58F0_u660E" class="headerlink" title="var 声明"></a>var 声明</h3><ul>
+<li>在函数内未使用var声明变量，会自动提升为global object</li>
+</ul>
+<pre>
+var func1 = function(){
+    withoutVar = '我是全局的?';
+};
+func1();
+console.log(withoutVar);
+</pre>
+
+<h2 id="5B_5D__u4E0E_dot"><a href="#5B_5D__u4E0E_dot" class="headerlink" title="[] 与 dot"></a>[] 与 dot</h2><ul>
+<li>对象的属性与方法，同时可以使用[]或.的方式来调用</li>
+</ul>
+<pre>
+var aSong = {
+    title: '江南Style',
+    singer: 'PSV',
+    duration: '6:43',
+    summary: function(prefix){
+        return prefix.concat(this.title).concat(this.singer).concat(this.duration);
+    }
+};
+console.log(aSong.title);
+console.log(aSong['title']);
+console.log(aSong['summary']('MTV:'));
+</pre>
+
+<h2 id="u51FD_u6570"><a href="#u51FD_u6570" class="headerlink" title="函数"></a>函数</h2><ul>
+<li>创建函数的3种方法</li>
+</ul>
+<pre>
+function sum(x, y){ return x+y; }
+var sum = function(x, y){ return x+y; }; // var sum = function sum(x,y){ return x+y; };
+var sum = new Function('x','y', 'return x+y');
+console.log(sum(3,4));
+</pre>
+
+<h3 id="u533F_u540D_u51FD_u6570"><a href="#u533F_u540D_u51FD_u6570" class="headerlink" title="匿名函数"></a>匿名函数</h3><ul>
+<li>用于临时函数，一次性函数(定义后马上运行)</li>
+<li>匿名函数的循环调用</li>
+</ul>
+<pre>
+var list = [
+  {name: 'jerry', age: 23},
+  {name: 'bill', age: 3},
+  {name: 'tom', age: 42},
+  {name: 'jason', age: 8}
+];
+
+var sortedList = list.sort(function(a,b){
+  return a.age - b.age; // 为什么不使用 a.age === b.age
+
+  // 姓名如何排序？
+  // retun a.name > b.name;
+
+  // 多个字段如何排序？
+  // return (a.age - b.age) + (a.name > b.name);
+});
+console.log(sortedList);
+
+// Count Down
+
+(function(num){
+    if(num &lt; 0) return;
+
+    console.log(num);
+    num--;
+    arguments.callee(num);
+})(5);
+
+</pre>
+
+<h3 id="u81EA_u52A8_u8FD0_u884C"><a href="#u81EA_u52A8_u8FD0_u884C" class="headerlink" title="自动运行"></a>自动运行</h3><pre>
+(function sum(x, y){})(5,6); // 常用
+(function sum(x, y){}(5,6));
+!function sum(x, y){}(5,6);
+</pre>
+
+<h3 id="u4F5C_u7528_u57DF"><a href="#u4F5C_u7528_u57DF" class="headerlink" title="作用域"></a>作用域</h3><ul>
+<li>作用域是在定义时已经确定，非运行时得到</li>
+<li>只存在函数作用域，不存在块作用域</li>
+</ul>
+<pre>
+var myName = 'Mac';
+function tellMeName(){
+    var myName = 'PC';
+    console.log(myName);
+}
+
+console.log(myName);
+
+if(true){
+    myName = 'Pad';
+}
+console.log(myName);
+
+
+var countDownFrom = function(num){
+    console.log(num);
+    num--;
+    if(num &lt; 0)
+        return false;
+
+    arguments.callee(num);
+};
+
+countDownFrom(5);
+</pre>
+
+<h3 id="arguments"><a href="#arguments" class="headerlink" title="arguments"></a>arguments</h3><ul>
+<li>函数的可变长参数</li>
+<li>使用arguments.callee得到函数自身</li>
+</ul>
+<pre>
+var sum = function(){
+  var len = arguments.length;
+  if(0 >= len){
+    return 0;
+  }else if(len &lt; 2){
+    return arguments[0];
+  } else {
+    var total = 0;
+    for(var i = 0; i &lt; len; i++){
+      total += arguments[i];
+    }
+    return total;
+  }
+};
+
+console.log(sum());
+console.log(sum(2));
+console.log(sum(2,3,4,5));
+</pre>
+
+<h2 id="this_u5BF9_u8C61"><a href="#this_u5BF9_u8C61" class="headerlink" title="this对象"></a>this对象</h2><ul>
+<li>运行时确定，可以被更改</li>
+<li>针对实例的引用</li>
+<li>window是顶层的this</li>
+</ul>
+<pre>
+console.log(window === this);
+var weight = 1.23;
+console.log(weight, window.weight, this.weight);
+
+var playGame = function(){};
+console.log(playGame, window.playGame, this.playGame);
+
+// 高阶函数
+
+var callOtherFunction = function(otherFunc){
+    var testVariable = 123;
+    otherFunc();
+    console.log('调用结束');
+};
+
+var testVariable = 999;
+callOtherFunction(function(){
+    console.log(testVariable);
+});
+</pre>
+
+<h3 id="call/apply"><a href="#call/apply" class="headerlink" title="call/apply"></a>call/apply</h3><ul>
+<li>call与apply用于调用函数，同时改变this的定义</li>
+<li>call与apply不同在于参数传递方式不同</li>
+</ul>
+<pre>
+var Phone = function(){
+    this.myName = 'Tim';
+    this.phoneNumber = '13888888888';
+    this.makeAPhoneCall = function(toName, toPhone){
+        console.log(this.myName+'('+this.phoneNumber+')打给'+toName+'('+toPhone+')');
+    };
+};
+
+var myPhone = new Phone();
+myPhone.makeAPhoneCall('Bill', '020 12345678');
+
+var mike = {myName:'Mike', phoneNumber:'18999999999'};
+myPhone.makeAPhoneCall.call(mike, 'Jerry', '10086');
+myPhone.makeAPhoneCall.apply(mike, ['Jerry', '10086']);
+</pre>
+
+<h2 id="prototype"><a href="#prototype" class="headerlink" title="prototype"></a>prototype</h2><ul>
+<li>对象化的实现方案</li>
+<li>prototype chain原型键, instance.property -&gt; (class of instance).prototype.property -&gt; superclass(class of instance).prototype.property -&gt; … -&gt; object.prototype</li>
+<li>instance.construct.prototype == class.prototype</li>
+</ul>
+<pre>
+var Fruit = function(){
+    this.name = 'Fruit';
+    this.tellMyName = function(){
+        console.log('My name is ' + this.name);
+    };
+};
+Fruit.prototype.color = 'Green';
+Fruit.prototype.season = 'Autumn';
+
+var Orange = function(){
+    this.name = 'Orange';
+};
+Orange.prototype = new Fruit();
+Fruit.prototype.season = 'Summer';
+Fruit.prototype.taste = 'Sweet';
+
+var newFruit = new Orange();
+newFruit.taste = 'Acid';
+
+newFruit.tellMyName();
+console.log(newFruit.color);
+console.log(newFruit.season);
+console.log(newFruit.taste);
+</pre>
+
+<h2 id="String"><a href="#String" class="headerlink" title="String"></a>String</h2><ul>
+<li>concat与Array.join的效率</li>
+</ul>
+<pre>
+// #1 使用+连接
+var stringWithPlus = '';
+for (var i = 0; i &lt; 1000000; i++) {
+    stringWithPlus += 'hello ';
+}
+
+// #2 使用concat方法
+var stringWithConcat = '';
+for (var i = 0; i &lt; 1000000; i++) {
+    stringWithConcat.concat('hello ');
+}
+
+// #3 使用Array.join
+var stringBuffer = [];
+for (var i = 0; i &lt; 1000000; i++) {
+    stringBuffer.push('hello');
+}
+var stringByBuffer = stringBuffer.join(' ');
+
+// #4 使用underscore模板
+var template = "<% _.each(_.range(1000000),="" function(){="" %=""><%=name%> <% });="" %="">";
+var compiled = _.template(template);
+console.log(compiled({name: 'hello'}));
+
+// #5 使用定时器执行, 支持亿次级运算，不会阻止主进程
+function concatString(count, str, callback){
+    var stringPool = [];
+    setTimeout(function(){
+        stringPool.push(str);
+        count--;
+        if(count > 0){
+            setTimeout(arguments.callee, 0.001);
+        } else {
+            callback(stringPool);
+        }
+    }, 0.001);
+}
+
+concatString(100000000, 'hello', function(stringPool){
+    var combined = stringPool.join(" ");
+    console.log(combined);
+});
+</%></%=name%></%></pre>
+
+<h2 id="null__u4E0E_undefined"><a href="#null__u4E0E_undefined" class="headerlink" title="null 与 undefined"></a>null 与 undefined</h2><ul>
+<li>undefined 代表没有初始化，null可用于表示空值状态</li>
+<li>不应人工赋予undefined值</li>
+</ul>
+<pre>
+var uninitVariable;
+console.log(uninitVariable === undefined);
+uninitVariable = 0;
+console.log(uninitVariable === undefined);
+</pre>
+
+<h2 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h2><ul>
+<li>包括空格的字符串转换为Boolean对象，其值为true（所有类型转换为Boolean对象，其值为true）</li>
+<li>Boolean对象实例始终为true，不要new 方法创建Boolean实例</li>
+<li>false, 0, ‘’, “”, NaN, undefined, null为false，其它为true</li>
+</ul>
+<pre>
+console.log(Boolean(new Boolean(false)));
+console.log(Boolean(new Boolean('')));
+
+console.log(Boolean(false));
+console.log(Boolean(0));
+console.log(Boolean(''));
+console.log(Boolean(""));
+console.log(Boolean(NaN));
+console.log(Boolean(undefined));
+console.log(Boolean(null));
+</pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://zhuqling.github.io/2016/01/26/Javascript 进阶/" data-id="civhumxlo0022snsui4nx3n1u" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-C#编码规范" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/01/26/C#编码规范/" class="article-date">
@@ -472,7 +858,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/C#编码规范/" data-id="cikz434vu0000lrsuhn5dhv8v" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/C#编码规范/" data-id="civhumxiu0000snsuu5m2mit8" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C#</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Coding/">Coding</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编码规范/">编码规范</a></li></ul>
@@ -520,7 +906,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/Elastic Search指定分析器与分析器测试/" data-id="cikz434ya0020lrsuz48e1udt" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/Elastic Search指定分析器与分析器测试/" data-id="civhumxly002csnsu4j045a30" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/全文检索/">全文检索</a></li></ul>
@@ -631,7 +1017,7 @@ POST /index/fulltext/_search?pretty=true
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/中文全文检索/" data-id="cikz434x80012lrsudkv9xr68" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/中文全文检索/" data-id="civhumxkg0012snsu6zno8g74" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/全文检索/">全文检索</a></li></ul>
@@ -667,7 +1053,7 @@ POST /index/fulltext/_search?pretty=true
       
         <p>姓    名：朱青玲<br>毕业院校：九江职业技术学院<br>专  业：电子设备运行与维修<br>学    历：大专<br>电子邮件：zhuqling at gmail dot com<br>现居住：广州<br>github: <a href="http://www.github.com/zhuqling" target="_blank" rel="external">http://www.github.com/zhuqling</a></p>
 <blockquote>
-<p>10年IT外贸电商从业经验，专注IT团队管理和运营<br>Banggood.com 是国内领先的外贸电商网站<br>所在公司是eBay中国第一大卖家</p>
+<p>10年+IT外贸电商从业经验，专注IT团队管理和运营<br>Banggood.com 是国内领先的外贸电商网站<br>所在公司是eBay中国第一大卖家</p>
 </blockquote>
 <h2 id="u6559_u80B2_u80CC_u666F"><a href="#u6559_u80B2_u80CC_u666F" class="headerlink" title="教育背景"></a>教育背景</h2><p>1998/09 – 2003/07：九江职业技术学院 | 电子设备运行与维修 | 大专</p>
 <h2 id="u5DE5_u4F5C_u7ECF_u5386"><a href="#u5DE5_u4F5C_u7ECF_u5386" class="headerlink" title="工作经历"></a>工作经历</h2><h3 id="2015/11-_u81F3_u4ECA__u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8"><a href="#2015/11-_u81F3_u4ECA__u5E7F_u5DDE_u68D2_u8C37_u7F51_u7EDC_u79D1_u6280_u6709_u9650_u516C_u53F8" class="headerlink" title="2015/11-至今 广州棒谷网络科技有限公司"></a>2015/11-至今 广州棒谷网络科技有限公司</h3><p>APP技术总监 + 合伙人</p>
@@ -675,7 +1061,20 @@ POST /index/fulltext/_search?pretty=true
 <ol>
 <li>负责公司内部APP产品与技术</li>
 <li>APP团队组建与激励方案</li>
+<li>兼任产品经理、需求工程师、UI设计、后台开发、技术经理</li>
 </ol>
+<p>部分APP：</p>
+<ul>
+<li>管理宝 <a href="http://fir.im/ibg" target="_blank" rel="external">http://fir.im/ibg</a> 老板、总监、经理的运营指标、待办、审批、即时消息</li>
+<li>Test Buy <a href="http://fir.im/ibgtb" target="_blank" rel="external">http://fir.im/ibgtb</a> Amazon Test Buy平台</li>
+<li>合作平台 <a href="http://fir.im/ihezuo" target="_blank" rel="external">http://fir.im/ihezuo</a> 供应商系统，采购、返修、对账</li>
+<li>跟单 <a href="http://fir.im/ibggd" target="_blank" rel="external">http://fir.im/ibggd</a> 移动采购、返修、新品</li>
+<li>买手 <a href="http://fir.im/ibgms" target="_blank" rel="external">http://fir.im/ibgms</a> 市场新品采集、下单</li>
+<li>物料开发 <a href="http://fir.im/ibgwl" target="_blank" rel="external">http://fir.im/ibgwl</a> 市场物料采集、报价</li>
+</ul>
+<ul>
+<li>所有APP同时覆盖iOS和Android平台</li>
+</ul>
 <h3 id="2015/3-2015/11__u5E7F_u5DDE_u8D5B_u9177_u6BD4_u8F6F_u4EF6_u516C_u53F8"><a href="#2015/3-2015/11__u5E7F_u5DDE_u8D5B_u9177_u6BD4_u8F6F_u4EF6_u516C_u53F8" class="headerlink" title="2015/3-2015/11 广州赛酷比软件公司"></a>2015/3-2015/11 广州赛酷比软件公司</h3><p>技术总监</p>
 <p>工作职责：</p>
 <ol>
@@ -810,7 +1209,7 @@ POST /index/fulltext/_search?pretty=true
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://zhuqling.github.io/2016/01/26/简历/" data-id="cikz434wv000hlrsubcr65rxy" class="article-share-link">Share</a>
+      <a data-url="http://zhuqling.github.io/2016/01/26/简历/" data-id="civhumxk1000hsnsuxo42ai4x" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/banggood-com/">banggood.com</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ebay/">ebay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/棒谷/">棒谷</a></li></ul>
@@ -837,7 +1236,7 @@ POST /index/fulltext/_search?pretty=true
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coding/">Coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fiddler/">Fiddler</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSL-debug/">SSL debug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/banggood-com/">banggood.com</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/corkscrew/">corkscrew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ebay/">ebay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-rebase/">git rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-revert/">git revert</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitignore/">gitignore</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http-proxy/">http proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nc/">nc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui/">ui</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/全文检索/">全文检索</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术分享/">技术分享</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/棒谷/">棒谷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C#</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Coding/">Coding</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Elastic-Search/">Elastic Search</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fiddler/">Fiddler</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SSL-debug/">SSL debug</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/banggood-com/">banggood.com</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/command/">command</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/corkscrew/">corkscrew</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/css/">css</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ebay/">ebay</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git/">git</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-rebase/">git rebase</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/git-revert/">git revert</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/gitignore/">gitignore</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/http-proxy/">http proxy</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iOS/">iOS</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/iterm/">iterm</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/js/">js</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/linux/">linux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nc/">nc</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/network/">network</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ssh/">ssh</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/tmux/">tmux</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ui/">ui</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/全文检索/">全文检索</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/前端/">前端</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/技术分享/">技术分享</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/棒谷/">棒谷</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编码规范/">编码规范</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -846,7 +1245,7 @@ POST /index/fulltext/_search?pretty=true
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/tags/Elastic-Search/" style="font-size: 15px;">Elastic Search</a> <a href="/tags/Fiddler/" style="font-size: 10px;">Fiddler</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/SSL-debug/" style="font-size: 10px;">SSL debug</a> <a href="/tags/banggood-com/" style="font-size: 10px;">banggood.com</a> <a href="/tags/corkscrew/" style="font-size: 10px;">corkscrew</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/ebay/" style="font-size: 10px;">ebay</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git-rebase/" style="font-size: 10px;">git rebase</a> <a href="/tags/git-revert/" style="font-size: 10px;">git revert</a> <a href="/tags/gitignore/" style="font-size: 10px;">gitignore</a> <a href="/tags/http-proxy/" style="font-size: 10px;">http proxy</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/nc/" style="font-size: 10px;">nc</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/ui/" style="font-size: 10px;">ui</a> <a href="/tags/全文检索/" style="font-size: 15px;">全文检索</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/技术分享/" style="font-size: 10px;">技术分享</a> <a href="/tags/棒谷/" style="font-size: 10px;">棒谷</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a>
+      <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/Coding/" style="font-size: 10px;">Coding</a> <a href="/tags/Elastic-Search/" style="font-size: 15px;">Elastic Search</a> <a href="/tags/Fiddler/" style="font-size: 10px;">Fiddler</a> <a href="/tags/Javascript/" style="font-size: 10px;">Javascript</a> <a href="/tags/SSL-debug/" style="font-size: 10px;">SSL debug</a> <a href="/tags/banggood-com/" style="font-size: 10px;">banggood.com</a> <a href="/tags/command/" style="font-size: 10px;">command</a> <a href="/tags/corkscrew/" style="font-size: 10px;">corkscrew</a> <a href="/tags/css/" style="font-size: 15px;">css</a> <a href="/tags/ebay/" style="font-size: 10px;">ebay</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/git-rebase/" style="font-size: 10px;">git rebase</a> <a href="/tags/git-revert/" style="font-size: 10px;">git revert</a> <a href="/tags/gitignore/" style="font-size: 10px;">gitignore</a> <a href="/tags/http-proxy/" style="font-size: 10px;">http proxy</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/iterm/" style="font-size: 10px;">iterm</a> <a href="/tags/javascript/" style="font-size: 10px;">javascript</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/nc/" style="font-size: 10px;">nc</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/ssh/" style="font-size: 10px;">ssh</a> <a href="/tags/tmux/" style="font-size: 10px;">tmux</a> <a href="/tags/ui/" style="font-size: 10px;">ui</a> <a href="/tags/全文检索/" style="font-size: 15px;">全文检索</a> <a href="/tags/前端/" style="font-size: 10px;">前端</a> <a href="/tags/技术分享/" style="font-size: 10px;">技术分享</a> <a href="/tags/棒谷/" style="font-size: 10px;">棒谷</a> <a href="/tags/编码规范/" style="font-size: 10px;">编码规范</a>
     </div>
   </div>
 
@@ -855,7 +1254,7 @@ POST /index/fulltext/_search?pretty=true
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">8</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">September 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/08/">August 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">6</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">January 2016</a><span class="archive-list-count">8</span></li></ul>
     </div>
   </div>
 
@@ -867,6 +1266,14 @@ POST /index/fulltext/_search?pretty=true
       <ul>
         
           <li>
+            <a href="/2016/09/08/linux_command_1/">Linux命令复习</a>
+          </li>
+        
+          <li>
+            <a href="/2016/08/31/tmux入门/">tmux入门</a>
+          </li>
+        
+          <li>
             <a href="/2016/02/23/Fiddle调试iOS-Android-APP-SSL安全证书的方法/">Fiddle调试iOS/Android APP SSL安全证书的方法</a>
           </li>
         
@@ -876,14 +1283,6 @@ POST /index/fulltext/_search?pretty=true
         
           <li>
             <a href="/2016/02/17/QQ公众UI组件自动适配UI/">QQ公众UI组件自动适配UI</a>
-          </li>
-        
-          <li>
-            <a href="/2016/02/17/前端冷知识/">前端冷知识</a>
-          </li>
-        
-          <li>
-            <a href="/2016/02/15/git-重设远程源/">git 重设远程源</a>
           </li>
         
       </ul>
